@@ -12,7 +12,18 @@ def all_products(request):
         'products': products,
     }
 
-    return render(request, 'products/products.html', context)
+    return render(request, 'products/fishboard.html', context)
+
+def short_board(request):
+    """ A view to show all products, including sorting and search queries """
+
+    products = Product.objects.all()
+
+    context = {
+        'products': products,
+    }
+
+    return render(request, 'products/shortboard.html', context)
 
 
 def product_detail(request, product_id):
