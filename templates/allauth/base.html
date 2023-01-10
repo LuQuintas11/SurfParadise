@@ -15,7 +15,7 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
         <link rel="stylesheet" href="/static/css/base.css">
     {% endblock %}
 
@@ -33,7 +33,6 @@
 
     <title> {% block extra_title %}{% endblock %}</title>
   </head>
-  <body>
     <header class="container-header">
         <nav class="navbar navbar-expand-lg">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,9 +47,9 @@
                       Surfboards
                     </button>
                     <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Action</button>
-                      <button class="dropdown-item" type="button">Another action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}">Fish Boards</a></button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}">Short Boards</a></button>
+                      <button class="dropdown-item" type="button">Fins</button>
                     </div>
                   </div>
                 </li>
@@ -60,10 +59,13 @@
                       Wetsuit
                     </button>
                     <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Action</button>
-                      <button class="dropdown-item" type="button">Another action</button>
-                      <button class="dropdown-item" type="button">Something else here</button>
+                      <button class="dropdown-item" type="button">Women</button>
+                      <button class="dropdown-item" type="button">Men</button>
+                      <button class="dropdown-item" type="button">Kids</button>
                     </div>
+                    <button  class="contact" type="button"  aria-expanded="false">
+                      Contact Us
+                    </button>
                   </div>
                 </li>
                
@@ -113,6 +115,7 @@
 </nav>
     </header>
   <body>
+    <div class="container-carousel">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -151,20 +154,34 @@
         <span class="sr-only">Next</span>
       </button>
     </div>
-    </body>
+    </div>
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
-
-    {% block postloadjs %}
-    {% endblock %}
-
-    
   </body>
+
+  <footer>
+    <h2 class="footer-title">Surfer Paradise</h2>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-4">
+    <h5>Shop</h5>
+    <ul>
+       <li>Surfboards</li>
+       <li>Wetsuits</li>
+    </ul>
+    </div>
+    <div class="col-4">
+    <h5>Info</h5>
+    <ul>
+      <li>Contact us </li>
+      <li>Board hire</li>
+    </ul>
+    </div>
+    <div class="col-4">
+    <h5>Social Media</h5>
+    </div>
+    </div>
+    </div>
+  </footer>
 </html>

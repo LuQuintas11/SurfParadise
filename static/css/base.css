@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
 
 html{
@@ -8,7 +8,8 @@ html{
 body{
     
     background-size: cover;
-    height: calc(100vh - 164px)
+    height: calc(100vh - 164px);
+    font-family: Shadows;
 
 }
 a {
@@ -26,13 +27,21 @@ a {
 
 .navbar{
     background-color: rgb(84, 84, 84);
-    font-family: Oswald;
+    font-family: Shadows;
 
 }
 .container-header{
 width: 100%;
 margin-right: auto;
 margin-left: auto;
+}
+
+.carousel-item{
+    height: 600px;
+}
+
+.contact{
+    background-color: rgb(84,84,84);
 }
 
 
@@ -45,10 +54,27 @@ margin-left: auto;
 
 }
 
-.carouselExampleControls{
-    height: 50%;
+#carouselExampleCaptions{
+    height: 600px;
 }
 
+footer{
+    background-color: rgb(84,84,84);
+}
+
+.footer-title{
+    text-align: center;
+    margin-top: 15px;
+
+}
+
+h5{
+    text-decoration: underline;
+}
+
+li{
+    list-style: none;
+}
 @media (min-width: 1200px){
     .container{
         max-width: 80%;
