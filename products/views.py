@@ -6,13 +6,16 @@ from .models import Product
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
+    category = request.GET.get("category", None)
     products = Product.objects.all()
+    if category:
+        products = products.filter(category__name=category)
 
     context = {
         'products': products,
     }
 
-    return render(request, 'products/fishboard.html', context)
+    return render(request, 'products/products.html', context)
 
 
 

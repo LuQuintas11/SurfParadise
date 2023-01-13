@@ -47,9 +47,9 @@
                       Surfboards
                     </button>
                     <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}">Fish Boards</a></button>
-                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}">Short Boards</a></button>
-                      <button class="dropdown-item" type="button">Fins</button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Fishboard">Fish Boards</a></button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Shortboard">Short Boards</a></button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Fins">Fins</a></button>
                     </div>
                   </div>
                 </li>
@@ -117,6 +117,7 @@
   <body>
     <div class="container-carousel">
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+     
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
@@ -158,6 +159,14 @@
     {% if messages %}
         <div class="message-container"></div>
     {% endif %}
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
   </body>
 
   <footer>

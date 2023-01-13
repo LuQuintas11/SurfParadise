@@ -10,7 +10,10 @@ body{
     background-size: cover;
     height: calc(100vh - 164px);
     font-family: Shadows;
-
+}
+button{
+    border: none;
+    font-family: 20px;
 }
 a {
     color: black;
@@ -64,7 +67,10 @@ footer{
 
 .footer-title{
     text-align: center;
-    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 50px;
+    color: white;
+    font-weight: 700;
 
 }
 
