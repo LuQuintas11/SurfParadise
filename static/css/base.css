@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Shadows+Into+Light&display=swap');
 
 
 html{
@@ -9,11 +9,10 @@ body{
     
     background-size: cover;
     height: calc(100vh - 164px);
-    font-family: ShadowsIntoLight;
+   
 }
 button{
-    border: none;
-    font-family: 20px;
+    border:none;
 }
 a {
     color: black;
@@ -24,13 +23,15 @@ a {
 .title{
      font-weight: 900;
      font-size: 30px;
+     font-family: ShadowsIntoLight;
      
 
 }
 
 .navbar{
-    background-color: rgb(84, 84, 84);
-    font-family: Shadows;
+    background-color: rgb(249, 246, 246);
+
+    
 
 }
 .container-header{
@@ -44,16 +45,18 @@ margin-left: auto;
 }
 
 .contact{
-    background-color: rgb(84,84,84);
+    background-color: rgb(249, 246, 246);
+    border: none;
+    font-size: 20px;
 }
 
 
 .dropdown-toggle{
     border: none;
-    background-color: rgb(84,84,84);
+    background-color: rgb(249, 246, 246);
     margin-top: 8px;
-    font-weight: 500;
     font-size: 20px;
+    font-family:Monserrat;
 
 }
 
@@ -62,7 +65,7 @@ margin-left: auto;
 }
 
 footer{
-    background-color: rgb(84,84,84);
+    background-color: rgb(142 136 136);
 }
 
 .footer-title{

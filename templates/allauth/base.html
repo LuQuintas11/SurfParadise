@@ -59,9 +59,9 @@
                       Wetsuit
                     </button>
                     <div class="dropdown-menu">
-                      <button class="dropdown-item" type="button">Women</button>
-                      <button class="dropdown-item" type="button">Men</button>
-                      <button class="dropdown-item" type="button">Kids</button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Women Wetsuit">Women</a></button>
+                      <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Men Wetsuit">Men</a></button>
+              
                     </div>
                     <button  class="contact" type="button"  aria-expanded="false">
                       Contact Us
@@ -70,12 +70,10 @@
                 </li>
                
               </ul>
-              <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
+                <input class="form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
-           
-       
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -121,7 +119,7 @@
   </body>
 
   <footer>
-    <h2 class="footer-title">Surfer Paradise</h2>
+    <h2 class="footer-title title">Surfer Paradise</h2>
     <div class="container-fluid">
     <div class="row">
     <div class="col-4">
