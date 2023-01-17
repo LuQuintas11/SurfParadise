@@ -41,6 +41,20 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <a class="navbar-brand title" href="{% url 'home' %}">Surfer Paradise</a>
               <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <div class="dropdown">
+                    <button class=" dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                      All products
+                    </button>
+                    <div class="dropdown-menu">
+                      <button class="dropdown-item"><a href="{% url 'products' %}?sort=price&direction=asc">By Price</a></button>
+                      <button  class="dropdown-item"><a href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></button>
+                      <button class="dropdown-item"><a href="{% url 'products' %}?sort=category&direction=asc">By Category</a></button>
+                      <button class="dropdown-item"><a href="{% url 'products' %}">All Products</a></button>
+                    </div>
+              
+                </li>
+
                 <li class="nav-item active">
                   <div class="dropdown">
                     <button class="  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
@@ -76,10 +90,10 @@
               </form>
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" href="{% url 'view_bag' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0"><i class="fa-thin fa-user"></i></p>
+                                <div><i class="fas fa-user fa-lg">asdas</i></div>
+                                <p class="my-0"><i class="fa-thin fa-user">asdas</i></p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -94,7 +108,7 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
