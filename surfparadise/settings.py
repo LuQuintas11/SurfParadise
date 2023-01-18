@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'products', 
     'bag', 
     'checkout',
+    'crispy_forms',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -58,6 +59,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'surfparadise.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
