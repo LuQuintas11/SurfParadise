@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block content %}
 <div class="container">
     <section class="jumbotron text-center bg-white">
         <div class="container">
@@ -10,20 +11,16 @@
     </section>
     <div>
         <div class="row">
-            {% for post in new %}
+            {% for fav in favourites %}
             <div class="col-md-4">
-                <a class="text-dark" href="{{post.get_absolute_url}}">
+                <a class="text-dark" href="{{fav.get_absolute_url}}">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="{{post.image.url}}" alt="{{ post.title }}">
+                        <img class="card-img-top" src="{{fav.image.url}}" alt="{{ fav.name }}">
                         <div class="card-body">
-                            <h2 style="font-size:18px;font-weight:bold">{{post.title|truncatechars:50}}</h2>
-                            <p class="card-text">{{post.excerpt|truncatechars:50}}</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <small class="text-muted">9 mins</small>
+                            <h2 style="font-size:18px;font-weight:bold">{{fav.name}}</h2> 
                                 <div id="favourite-section"><a href="{% url 'favourite_add' post.id %}"
                                         class="btn btn-outline-primary">Remove</a></div>
                             </div>
-
                         </div>
                     </div>
                 </a>
@@ -32,4 +29,7 @@
         </div>
     </div>
 </div>
+
+{% endblock %}
+
 

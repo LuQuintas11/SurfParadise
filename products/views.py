@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect, redirect
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Review
 from .forms import ReviewForm
 from django import forms
 from django.views.generic.edit import FormView
@@ -59,7 +59,30 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
-    product = get_object_or_404(Product, pk=product_id)
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 3)
+        content = request.POST.get('body', '')
+        print(request.POST)
+        if content:
+            reviews = Review.objects.filter(created_by=request.user, product=product)
+            
+            if reviews.count() > 0:
+                review = reviews.first()
+                review.rating = rating
+                review.content = content
+                review.save()
+            else:
+                review = Review.objects.create(
+                    product=product,
+                    rating=rating,
+                    content=content,
+                    created_by=request.user
+                )
+
+            return redirect('product', id=product_id )
+
 
     context = {
         'product': product,
@@ -68,51 +91,74 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
-def post(self, request, slug, *args, **kwargs):
-    ueryset = Post.objects.filter(status=1)
-    post = get_object_or_404(queryset, slug=slug)
+# def product(request, slug):
+#     product = get_object_or_404(Product, slug=slug)
 
-    reviews = post.reviews.filter(approved=True).order_by("-created_on")
-        
-
-    reviews_form = ReviewForm(data=request.POST)
-    if review_form.is_valid():
-        review_form.instance.email = request.user.email
-        review_form.instance.name = request.user.username
-        review = review_form.save(commit=False)
-        review.post = post
-        review.save()
-    else:
-        review_form = CommentForm()
-
-    return render(
-        request,
-        'products/product_detail.html',
-        {   
-               
-            "post": post,
-            "comments": reviews,
-            "commented": True,
-            "comment_form": review_form,
+#     if request.method == 'POST':
+#         rating = request.POST.get('rating', 3)
+#         content = request.POST.get('body', '')
+#         print(request.POST)
+#         if content:
+#             reviews = Review.objects.filter(created_by=request.user, product=product)
             
+#             if reviews.count() > 0:
+#                 review = reviews.first()
+#                 review.rating = rating
+#                 review.content = content
+#                 review.save()
+#             else:
+#                 review = Review.objects.create(
+#                     product=product,
+#                     rating=rating,
+#                     content=content,
+#                     created_by=request.user
+#                 )
 
-            },
-        )
+#             return redirect('product', slug=slug)
+
+#     return render(
+#         request,
+#         'products/product_detail.html',
+     
+#         )
 
 
 
 @ login_required
 def favourite_add(request, id):
-    post = get_object_or_404(Product, id=id)
-    if post.favourites.filter(id=request.user.id).exists():
-        post.favourites.remove(request.user)
+    product = get_object_or_404(Product, id=id)
+    if product.favourites.filter(id=request.user.id).exists():
+        product.favourites.remove(request.user)
     else:
-        post.favourites.add(request.user)
+        product.favourites.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-@ login_required
+from django.contrib.auth.models import User
+
+@login_required
 def favourite_list(request):
-    new = Product.newmanager.filter(favourites=request.user)
+    favourite = Product.newmanager.filter(favourites=request.user)
+
+    # list to hold the favourites
+    favourites = []
+
+    # get the current user
+    user = User.objects.get(id=request.user.id)
+    # get all products
+    all_products = list(Product.objects.all())
+
+    # loop over the products
+    for product in all_products:
+        # loop over the m2m list of the product
+        for fav in product.favourites.all():
+            # if the user is in the m2m list
+            if fav.id == user.id:
+                # add the product to the favourites list
+                favourites.append(product)
+
+
+    print(favourites)
+
     return render(request,
                   'products/favourites.html',
-                  {'new': new})
+                  {'favourite': favourite})

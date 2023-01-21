@@ -49,18 +49,17 @@ class Product(models.Model):
 
 
 class Review(models.Model):
-    post = models.ForeignKey(Product, on_delete=models.CASCADE,
-                             related_name="reviews")
-                           
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    rating = models.IntegerField(default=3)
     body = models.TextField()
+    #created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
+   
 
-    approved = models.BooleanField(default=False)
+   
 
     class Meta:
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Review {self.body} by {self.name}"
+        return f"Review {self.content} by {self.name}"

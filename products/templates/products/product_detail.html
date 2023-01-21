@@ -137,22 +137,43 @@
                 <!-- For later -->
 
 
-                {% if user.is_authenticated %}
-                {% if reviewed %}
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-
-                <h3 class="comment-heading">Leave a Review:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {{ comment_form | crispy }}
+                {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'product_detail' product.id %}" style="margin-top: 1.3em;">
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
-                </form>
+                    {{ hola }}
+                
+                <div>
+                    <label>Rating</label>
+                    <select name="rating">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+
+                </div>
+                <div>
+                    <label>Review
+                    </label>
+                    <textarea name="content"></textarea>
+                </div>
+
+                <p>Posting as: {{ user.username }}</p>
+                
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
                 {% endif %}
-                {% endif %}
+
+            {% for review in product.reviews.all %}
+               <div>
+                <strong>Rating</strong>{{ review.rating}}/6<br>
+                <srong>Review:</srong><br>
+                {{ review.content}}
+               </div>
+            {% endfor %}
             </div>
         </div>
     </div>
