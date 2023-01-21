@@ -16,7 +16,7 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-        <link rel="stylesheet" href="/static/css/base.css">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -81,7 +81,7 @@
               
                     </div>
                     <button  class="contact" type="button"  aria-expanded="false">
-                      Contact Us
+                      <a href="{% url 'contact' %}">Contact Us</a>
                     </button>
                   </div>
                 </li>
@@ -104,10 +104,13 @@
 
                                 <a href="" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a class="dropdown-item" href="{% url 'favourite_list' %}">Saved Posts</a>
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+
                             {% endif %}
+
                         </div>
                     </li>
                     <li class="list-inline-item">
@@ -155,8 +158,7 @@
     <div class="col-4">
     <h5>Info</h5>
     <ul>
-      <li>Contact us </li>
-      <li>Board hire</li>
+      <li><a href="{% url 'contact' %}">Contact Us</a> </li>
     </ul>
     </div>
     <div class="col-4">

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'bag', 
     'checkout',
     'crispy_forms',
+    'contact',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

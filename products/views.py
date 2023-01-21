@@ -1,7 +1,11 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product
+from .forms import ReviewForm
+from django import forms
+from django.views.generic.edit import FormView
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -62,3 +66,53 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def post(self, request, slug, *args, **kwargs):
+    ueryset = Post.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+
+    reviews = post.reviews.filter(approved=True).order_by("-created_on")
+        
+
+    reviews_form = ReviewForm(data=request.POST)
+    if review_form.is_valid():
+        review_form.instance.email = request.user.email
+        review_form.instance.name = request.user.username
+        review = review_form.save(commit=False)
+        review.post = post
+        review.save()
+    else:
+        review_form = CommentForm()
+
+    return render(
+        request,
+        'products/product_detail.html',
+        {   
+               
+            "post": post,
+            "comments": reviews,
+            "commented": True,
+            "comment_form": review_form,
+            
+
+            },
+        )
+
+
+
+@ login_required
+def favourite_add(request, id):
+    post = get_object_or_404(Product, id=id)
+    if post.favourites.filter(id=request.user.id).exists():
+        post.favourites.remove(request.user)
+    else:
+        post.favourites.add(request.user)
+    return HttpResponseRedirect(request.META['HTTP_REFERER'])
+
+@ login_required
+def favourite_list(request):
+    new = Product.newmanager.filter(favourites=request.user)
+    return render(request,
+                  'products/favourites.html',
+                  {'new': new})
