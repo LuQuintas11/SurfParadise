@@ -81,7 +81,7 @@ def product_detail(request, product_id):
                     created_by=request.user
                 )
 
-            return redirect('product', id=product_id )
+            return redirect('product', product_id=product_id)
 
 
     context = {

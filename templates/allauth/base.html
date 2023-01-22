@@ -146,23 +146,27 @@
 
   <footer>
     <h2 class="footer-title title">Surfer Paradise</h2>
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-4">
+    <div class="container-footer">
+    <div class="row row-footer">
+    <div class="col-4 column-footer">
     <h5>Shop</h5>
     <ul>
-       <li>Surfboards</li>
-       <li>Wetsuits</li>
+       <li><a href="{% url 'products' %}?category=Shortboard">Shortboards</a></li>
+       <li><a href="{% url 'products' %}?category=Fishboard">Fishboards</a></li>
+       <li><a href="{% url 'products' %}?category=Women Wetsuit">Women Wetsuits</a></li>
+       <li><a href="{% url 'products' %}?category=Men Wetsuit">Men Wetsuits</a></li>
+       <li><a href="{% url 'products' %}?category=Fins">Fins</a></li>
     </ul>
     </div>
-    <div class="col-4">
+    <div class="col-4 column-footer">
     <h5>Info</h5>
     <ul>
       <li><a href="{% url 'contact' %}">Contact Us</a> </li>
     </ul>
     </div>
-    <div class="col-4">
+    <div class="col-4  column-footer">
     <h5>Social Media</h5>
+    <i class="fa-brands fa-square-facebook">kjnkjn</i>
     </div>
     </div>
     </div>
