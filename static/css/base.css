@@ -9,12 +9,31 @@ html{
 
 body{
     
-    background-size: cover;
+    background-size: cover !important;
+    background: url('/media/body-image.jpeg') no-repeat center ;
     height: calc(100vh - 164px);
    
 }
 button{
     border:none;
+}
+ .sale-button{
+    color: white;
+    font-weight: 900;
+    font-family: Caveat;
+    font-size: 30px;
+
+ }
+ .text-font{
+    font-family: Quicksand;
+    color: white;
+    font-weight: 900;
+ }
+
+.btn-sale{
+    background-color:#1d262c78;
+    border-color:#1d262c78;
+   
 }
 a {
     color: black;
