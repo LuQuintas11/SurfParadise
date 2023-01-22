@@ -2,6 +2,12 @@
 
 
 
+.nav-links.nav-active {
+    display: block !important;
+    background: #00000042;
+    z-index: 1000;
+    height: calc(30vh) !important;
+}
 
 html{
     height: 100%;
@@ -188,7 +194,7 @@ li{
         height:50vh;
         top:8vh;
         background-color: #ffffff66;
-        display: flex;
+        display: none;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -257,6 +263,19 @@ body{
 .column-footer{
     max-width: 50%;
 }
+
+.navbar-brand{
+    font-size: 1.8rem;
+    
+}
+
+.search-dropdown{
+    position: absolute;
+    top:25px;
+    right: 110px;
+}
+
+
 }I  
 
 

@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponseRedirect, redirect
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Review
+from .models import Product, Review, Category
 from .forms import ReviewForm
 from django import forms
 from django.views.generic.edit import FormView
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 # Create your views here.
@@ -36,6 +37,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        
     }
 
     return render(request, 'products/products.html', context)
@@ -47,71 +49,43 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, id=product_id)
+    favorite = bool(product.favourites.filter(id=request.user.id))
 
     if request.method == 'POST':
         rating = request.POST.get('rating', 3)
-        content = request.POST.get('body', '')
+        body = request.POST.get('body', '')
         print(request.POST)
-        if content:
-            reviews = Review.objects.filter(created_by=request.user, product=product)
+        if body:
+            reviews = Review.objects.filter(
+                # created_by=request.user, 
+                product=product)
             
             if reviews.count() > 0:
                 review = reviews.first()
                 review.rating = rating
-                review.content = content
+                review.body = body
                 review.save()
             else:
                 review = Review.objects.create(
                     product=product,
                     rating=rating,
-                    content=content,
-                    created_by=request.user
+                    body=body,
+                    # created_by=request.user
                 )
 
-            return redirect('product', product_id=product_id)
+            return redirect('product_detail', product_id=product_id)
 
 
     context = {
         'product': product,
+        'favorite': favorite,
     }
 
     return render(request, 'products/product_detail.html', context)
 
 
-# def product(request, slug):
-#     product = get_object_or_404(Product, slug=slug)
 
-#     if request.method == 'POST':
-#         rating = request.POST.get('rating', 3)
-#         content = request.POST.get('body', '')
-#         print(request.POST)
-#         if content:
-#             reviews = Review.objects.filter(created_by=request.user, product=product)
-            
-#             if reviews.count() > 0:
-#                 review = reviews.first()
-#                 review.rating = rating
-#                 review.content = content
-#                 review.save()
-#             else:
-#                 review = Review.objects.create(
-#                     product=product,
-#                     rating=rating,
-#                     content=content,
-#                     created_by=request.user
-#                 )
-
-#             return redirect('product', slug=slug)
-
-#     return render(
-#         request,
-#         'products/product_detail.html',
-     
-#         )
-
-
-
-@ login_required
+@login_required
 def favourite_add(request, id):
     product = get_object_or_404(Product, id=id)
     if product.favourites.filter(id=request.user.id).exists():
@@ -120,7 +94,7 @@ def favourite_add(request, id):
         product.favourites.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-from django.contrib.auth.models import User
+
 
 @login_required
 def favourite_list(request):
@@ -143,8 +117,9 @@ def favourite_list(request):
                 # add the product to the favourites list
                 favourites.append(product)
 
-
+    
     print(favourites)
+
 
     return render(request,
                   'products/favourites.html',

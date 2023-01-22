@@ -85,7 +85,7 @@
               </ul>
           <div class="account-bag">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-        <li class="list-inline-item dropdown">
+        <li class="list-inline-item dropdown search-dropdown">
           <a href="#" class="text-center" data-toggle="dropdown"><i class="fa-solid fa-magnifying-glass">xcvxc</i></a>
           <div class="dropdown-menu">
          <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
@@ -143,6 +143,13 @@
 </nav>
     </header>
   <body>
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
