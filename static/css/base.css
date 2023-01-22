@@ -7,7 +7,7 @@ html{
     height: 100%;
 }
 
-body{
+.body{
     
     background-size: cover !important;
     background: url('/media/body-image.jpeg') no-repeat center ;
@@ -53,12 +53,20 @@ a {
 .navbar{
     background-color: rgb(249, 246, 246);
 }
-.container-header{
-width: 100%;
-margin-right: auto;
-margin-left: auto;
-}
+ nav{
+    display: flex;
+    justify-content: space-around;
+ }
 
+ .burger div{
+      width: 25px;
+      height: 5px;
+      background-color: black;
+      margin: 5px;
+ }
+ .burger{
+    display: none;
+ }
 .carousel-item{
     height: 600px;
 }
@@ -68,7 +76,10 @@ margin-left: auto;
     border: none;
     font-size: 20px;
     font-family: Quicksand;
+    margin-top: 10px;
+
 }
+
 
 .contactUs{
     font-family: Quicksand;
@@ -157,25 +168,77 @@ li{
     }
 }
 
-@media(min-width: 992px){
-    /* .fixed-top-desktop-onlu{
-        position: fixed;
-        top: 0;
-        right: 0px;
-        left: 0px;
-        z-index:1030;
-    } */
-    .header-container{
-        padding-top: 164px;
+@media(max-width: 1150px){
+
+.nav-links{
+        position: absolute;
+        left:0px;
+        height:50vh;
+        top:8vh;
+        background-color: #ffffff66;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(5%);
+        transition: transform 0.5s ease-in;
     }
+
+
+body{
+    overflow-x: hidden;
 }
 
-   @media(max-width: 560px){
+.burger{
+    display: block;
+    position: absolute;
+    left: 0px;
+}
+
+.nav-links{
+    transform: translateX(0%);
+}
+
+.account-bag{
+        position: absolute;
+        right: 0px;
+       
+    }
+.list-inline-item{
+    font-size:0.8rem
+}
+
+.nav-link {
+    display: block;
+    padding: 0;
+}
+
+
+   
+.form-inline{
+        display: none;
+    }
+
+.navbar-brand{
+    display: flex;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 2rem;
+    line-height: inherit;
+    white-space: nowrap;
+    margin:0 auto;
+}
+
+}
+
+@media(max-width: 560px){
      .row-footer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+   
   
     
 }  
@@ -183,4 +246,6 @@ li{
     max-width: 50%;
 }
 }I  
+
+
 
