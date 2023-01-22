@@ -2,12 +2,6 @@
 
 
 
-.nav-links.nav-active {
-    display: block !important;
-    background: #00000042;
-    z-index: 1000;
-    height: calc(30vh) !important;
-}
 
 html{
     height: 100%;
@@ -20,18 +14,12 @@ html{
     height: calc(100vh - 164px);
    
 }
+/*-----buttons-----*/
 button{
     border:none;
 }
 
-p{
-    font-family: Quicksand;
-}
-
-h1{
-    font-family: Caveat;
-}
- .sale-button{
+.sale-button{
     color: white;
     font-weight: 900;
     font-family: Caveat;
@@ -39,6 +27,65 @@ h1{
 
  }
 
+.btn-sale{
+    background-color:#1d262c78;
+    border-color:#1d262c78;
+   
+}
+
+/* .btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+} */
+
+.dropdown-toggle{
+    border: none;
+    background-color: rgb(249, 246, 246);
+    margin-top: 8px;
+    font-size: 20px;
+    font-family: Quicksand;
+
+}
+
+.dropdown-item{
+    font-family: Quicksand;
+}
+
+.btn-outline-black{
+    background: white;
+    color: black !important;
+    border: 1px solid black; 
+}
+
+
+
+p{
+    font-family: Quicksand;
+}
+
+/*----headings---*/
+h1{
+    font-family: Caveat;
+}
+
+h5{
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+li{
+    list-style: none;
+}
+
+.review-heading{
+
+    font-family: Caveat;
+}
+
+
+
+/*----accounts----*/
 .signup{
     margin-bottom:150px;
 }
@@ -46,17 +93,14 @@ h1{
 .login{
     margin-bottom:150px;
 }
- .text-font{
+ 
+.text-font{
     font-family: Quicksand;
     color: white;
     font-weight: 900;
  }
 
-.btn-sale{
-    background-color:#1d262c78;
-    border-color:#1d262c78;
-   
-}
+/*----nav---*/
 a {
     color: black;
     text-decoration: none;
@@ -80,19 +124,31 @@ a {
     justify-content: space-around;
  }
 
- .burger div{
+.nav-links.nav-active {
+    display: block !important;
+    background: #00000042;
+    z-index: 1000;
+    height: calc(30vh) !important;
+}
+
+.burger div{
       width: 25px;
       height: 5px;
       background-color: black;
       margin: 5px;
  }
+
  .burger{
     display: none;
  }
-.carousel-item{
-    height: 600px;
-}
 
+
+
+
+
+
+
+/*----contact form---*/
 .contact{
     background-color: rgb(249, 246, 246);
     border: none;
@@ -113,43 +169,13 @@ a {
 
 
 
-.carouselText{
-    font-family: Quicksand;
-    font-size: 40px;
-    background-color: white;
-    font-weight: 900;
-    border-radius: 0%;
-    border: 1px solid black;
 
-}
-.dropdown-toggle{
-    border: none;
-    background-color: rgb(249, 246, 246);
-    margin-top: 8px;
-    font-size: 20px;
-    font-family: Quicksand;
-
-}
-
-.dropdown-item{
-    font-family: Quicksand;
-}
-
-.btn-outline-black{
-    background: white;
-    color: black !important;
-    border: 1px solid black; 
-}
-
-#carouselExampleCaptions{
-    height: 600px;
-}
-
-footer{
-    background-color:rgb(107 105 105);
+/*-----footer----*/
+footer {
+    background-color: rgb(107 105 105);
     font-family: Quicksand;
     font-weight: 700;
-  
+   
 }
 
 
@@ -165,26 +191,9 @@ footer{
 .container-footer{
     margin-left: 15px;
 }
-h5{
-    text-decoration: underline;
-    font-weight: 700;
-}
-
-li{
-    list-style: none;
-}
 
 
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-@media (min-width: 1200px){
-    .container{
-        max-width: 80%;
-    }
-}
+/*----media query---*/
 
 @media(max-width: 1150px){
 
@@ -217,6 +226,26 @@ body{
     transform: translateX(0%);
 }
 
+.nav-link {
+    display: block;
+    padding: 0;
+}
+
+
+
+.navbar-brand{
+display: flex;
+padding-top: 0.3125rem;
+padding-bottom: 0.3125rem;
+margin-right: 1rem;
+font-size: 2rem;
+line-height: inherit;
+white-space: nowrap;
+margin:0 auto;
+}
+
+}
+
 .account-bag{
         position: absolute;
         right: 0px;
@@ -226,29 +255,14 @@ body{
     font-size:0.8rem
 }
 
-.nav-link {
-    display: block;
-    padding: 0;
-}
 
 
-   
-.form-inline{
+@media(max-width: 650px){
+    .form-inline{
         display: none;
     }
-
-.navbar-brand{
-    display: flex;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    margin-right: 1rem;
-    font-size: 2rem;
-    line-height: inherit;
-    white-space: nowrap;
-    margin:0 auto;
 }
 
-}
 
 @media(max-width: 560px){
      .row-footer{
@@ -269,11 +283,8 @@ body{
     
 }
 
-.search-dropdown{
-    position: absolute;
-    top:25px;
-    right: 110px;
-}
+
+
 
 
 }I  

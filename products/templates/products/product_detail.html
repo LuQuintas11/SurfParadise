@@ -113,23 +113,19 @@
     <div class="row">
 
         <div class="col card mb-4  mt-3 ">
-            <h3 class="comment-heading">Reviews:</h3>
+            <h3 class="review-heading">Reviews:</h3>
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
-                {% for review in reviews %}
-                <div class="comments" style="padding: 10px;">
+            
+                {% for review in product.reviews.all %}
+                <div class="review" style="padding: 10px;">
                     <p class="font-weight-bold">
-                        <!-- The commenter's name goes here. Check the model if you're not sure what that is -->
-                        {{ review.name }}
                         <span class="font-weight-light">
-                            <!-- The comment's created date goes here -->
                             {{ review.created_on }}
-                        </span> wrote:
+                        </span>  wrote:
                     </p>
-                    <!-- The body of the comment goes before the | -->
+                    <!-- The body of the review goes before the | -->
                     {{ review.body | linebreaks }}
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
@@ -137,35 +133,20 @@
     <div class="row">
         <div class="col card mb-4  mt-3 ">
             <div class="card-body">
-                <!-- For later -->
-
-
                 {% if request.user.is_authenticated %}
                 <form method="post" action="{% url 'product_detail' product.id %}" style="margin-top: 1.3em;">
                     {% csrf_token %}
-                    {{ hola }}
             
                 <div>
-                    <label>Review
-                    </label>
+                    <label>Review</label>
                     <textarea name="body"></textarea>
                 </div>
-
-                <p>Posting as: {{ user.username }}</p>
-                
                 <div>
                     <button>Submit</button>
                 </div>
             </form>
                 {% endif %}
 
-            {% for review in product.reviews.all %}
-               <div>
-                <strong>Rating</strong>{{ review.rating}}/6<br>
-                <srong>Review:</srong><br>
-                {{ review.body}}
-               </div>
-            {% endfor %}
             </div>
         </div>
     </div>

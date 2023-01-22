@@ -52,25 +52,16 @@ def product_detail(request, product_id):
     favorite = bool(product.favourites.filter(id=request.user.id))
 
     if request.method == 'POST':
-        rating = request.POST.get('rating', 3)
+
         body = request.POST.get('body', '')
         print(request.POST)
         if body:
             reviews = Review.objects.filter(
-                # created_by=request.user, 
+                
                 product=product)
-            
-            if reviews.count() > 0:
-                review = reviews.first()
-                review.rating = rating
-                review.body = body
-                review.save()
-            else:
-                review = Review.objects.create(
+            review = Review.objects.create(
                     product=product,
-                    rating=rating,
                     body=body,
-                    # created_by=request.user
                 )
 
             return redirect('product_detail', product_id=product_id)
@@ -94,33 +85,3 @@ def favourite_add(request, id):
         product.favourites.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
-
-
-@login_required
-def favourite_list(request):
-    favourite = Product.newmanager.filter(favourites=request.user)
-
-    # list to hold the favourites
-    favourites = []
-
-    # get the current user
-    user = User.objects.get(id=request.user.id)
-    # get all products
-    all_products = list(Product.objects.all())
-
-    # loop over the products
-    for product in all_products:
-        # loop over the m2m list of the product
-        for fav in product.favourites.all():
-            # if the user is in the m2m list
-            if fav.id == user.id:
-                # add the product to the favourites list
-                favourites.append(product)
-
-    
-    print(favourites)
-
-
-    return render(request,
-                  'products/favourites.html',
-                  {'favourite': favourite})

@@ -83,18 +83,16 @@
                   
                 </li>
               </ul>
-          <div class="account-bag">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-        <li class="list-inline-item dropdown search-dropdown">
-          <a href="#" class="text-center" data-toggle="dropdown"><i class="fa-solid fa-magnifying-glass">xcvxc</i></a>
-          <div class="dropdown-menu">
-         <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
-          
-                <input class=" form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
-                <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         
-              </form>
-            </div>
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <li class="list-inline-item ">
+          <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
+          
+            <input class=" form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
+            <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    
+          </form>
+            
             </li>
               
                     <li class="list-inline-item dropdown">
@@ -109,7 +107,7 @@
 
                                 <a href="" class="dropdown-item">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                <a class="dropdown-item" href="{% url 'favourite_list' %}">Saved Posts</a>
+                        
                             {% else %}
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>

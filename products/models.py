@@ -49,10 +49,10 @@ class Product(models.Model):
 
 
 class Review(models.Model):
+    
     product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
-    rating = models.IntegerField(default=3)
+    email = models.EmailField(default="user")
     body = models.TextField()
-    #created_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     created_on = models.DateTimeField(auto_now_add=True)
    
 
@@ -62,4 +62,4 @@ class Review(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Review {self.content} by {self.name}"
+        return f"Review {self.content} "
