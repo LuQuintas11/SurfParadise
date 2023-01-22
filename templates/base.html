@@ -47,7 +47,6 @@
                     </button>
                     <div class="dropdown-menu">
                       <button class="dropdown-item"><a href="{% url 'products' %}?sort=price&direction=asc">By Price</a></button>
-                      <button  class="dropdown-item"><a href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a></button>
                       <button class="dropdown-item"><a href="{% url 'products' %}?sort=category&direction=asc">By Category</a></button>
                       <button class="dropdown-item"><a href="{% url 'products' %}">All Products</a></button>
                     </div>
@@ -84,13 +83,20 @@
                   
                 </li>
               </ul>
-          
+          <div class="account-bag">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+        <li class="list-inline-item dropdown">
+          <a href="#" class="text-center" data-toggle="dropdown"><i class="fa-solid fa-magnifying-glass">xcvxc</i></a>
+          <div class="dropdown-menu">
          <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
-                <input class="form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          
+                <input class=" form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
+                <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        
               </form>
-              <div class="account-bag">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            </div>
+            </li>
+              
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="{% url 'view_bag' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">

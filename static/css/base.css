@@ -17,6 +17,14 @@ html{
 button{
     border:none;
 }
+
+p{
+    font-family: Quicksand;
+}
+
+h1{
+    font-family: Caveat;
+}
  .sale-button{
     color: white;
     font-weight: 900;
@@ -24,6 +32,14 @@ button{
     font-size: 30px;
 
  }
+
+.signup{
+    margin-bottom:150px;
+}
+
+.login{
+    margin-bottom:150px;
+}
  .text-font{
     font-family: Quicksand;
     color: white;
@@ -88,13 +104,8 @@ a {
 .formContact{
     font-family: Quicksand;
 }
-.contactForm{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-}
+
 
 .carouselText{
     font-family: Quicksand;
@@ -132,6 +143,7 @@ footer{
     background-color:rgb(107 105 105);
     font-family: Quicksand;
     font-weight: 700;
+  
 }
 
 
