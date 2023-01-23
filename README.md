@@ -51,5 +51,10 @@ I used Github user stories to keep track of the features that were already done 
 
 Between Mobile and Desktop there is a slightly difference. Mobile does not have search option. 
 
+Mobile
+
+Desktop
+
+
 
 
