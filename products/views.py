@@ -85,3 +85,14 @@ def favourite_add(request, id):
         product.favourites.add(request.user)
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
+
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
