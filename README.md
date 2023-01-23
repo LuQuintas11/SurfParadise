@@ -18,21 +18,24 @@ You can find the link to the live website right here
 
 ## Technologies used
 
-HTML, CSS, JavaScript, Python+Django
 
-## Frameworks, Libraries, Programmes and Tools
-
-* Django web framework - used to build the project
-
-* Bootstrap - for responsiveness, layout, modals, and general frontend style
-
-* django-allauth - for user registration and authentication
-
-* Code Institute Template - to display and run the command line terminal in the browser
-
-* Favicon.io - to create a favicon for the site
-
-* Lighthouse - to audit the site for performance, accessibility, SEO and best practices
+* Python 3.2 
+* Heroku 
+* Gitpod 
+* Github/ Github pages
+* Am I responsive?
+* Django Allauth
+* Bootstrap4 
+* Font Awesome 
+* Crispy Forms
+* Stripe
+* ElephantSQL 
+* Psycopg2
+* AWS
+* Gunicorn
+* Code Institute Template 
+* Favicon.io 
+* Lighthouse 
 
 
 ## Agile thinking
@@ -42,6 +45,10 @@ HTML, CSS, JavaScript, Python+Django
 I used Github user stories to keep track of the features that were already done and the ones I had to do
 
 [screenshoot]
+
+
+
+
 
 ## Features 
 
@@ -55,6 +62,77 @@ Mobile
 
 Desktop
 
+
+### Footer
+
+It has social media, contact form and links to have access to the products
+
+
+### All products
+
+[screenshot]
+
+### Product details
+As an original custome a create a favourite button
+[screenshot]
+
+### Shopping bag
+
+
+### Product admin
+
+
+
+## Social media
+
+
+## Contact form
+
+
+
+
+
+
+
+## Testing
+
+During the development process, I was manually testing in the following ways:
+
+* I used the devtools to simulate different screen sizes/devices
+* The sign up/sign in form field works: requires entry in every field, only accept and email in the email field, and the submit button works.
+* I simulate a purchase to check that the checkout funcionality is working 
+* Create a profile, log in and log out
+* Search for specific productos in search bar
+* Try to add a favourite product
+* Add a review
+
+
+## Post Development Testing
+
+### Lighthouse score
+
+I ran the tests for both mobile and desktop.
+
+Mobile:
+
+
+Desktop:
+
+
+
+
+
+The perfomance score in both is  low. I read Perfomance Django Documentation to know how to improve the performance. The sujestion were:
+
+1. Reduce unused JavaScript code: I do not have unused code in my project
+
+2. Use an appropriate size for images: The images were reduce 
+
+3. Remove resources that block rendering: it suggests tagging stylesheet link with disable or media attribute but this brings consequences when I want to render the website. 
+
+4. Reduce server response time: DJango documentation suggests several things to improve this like:
+     Use caching: I did set caching in the setting file. This improve the perfomance but I have to remove it because it was compromising the log in.
+     Reduce Queries: I  went through my code and I did noy find the way to reduce the amount of queries 
 
 
 
