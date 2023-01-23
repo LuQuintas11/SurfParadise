@@ -7,7 +7,7 @@ from django import forms
 from django.views.generic.edit import FormView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
+from .forms import ProductForm
 
 # Create your views here.
 
