@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ProductForm
 
+
 # Create your views here.
 
 def all_products(request):
@@ -54,17 +55,18 @@ def product_detail(request, product_id):
     if request.method == 'POST':
 
         body = request.POST.get('body', '')
-        print(request.POST)
+        
         if body:
-            reviews = Review.objects.filter(
-                
-                product=product)
+            reviews = Review.objects.filter(product=product)
             review = Review.objects.create(
                     product=product,
                     body=body,
-                )
 
-            return redirect('product_detail', product_id=product_id)
+                )
+        
+
+
+        return redirect('product_detail', product_id=product_id)
 
 
     context = {
@@ -73,7 +75,6 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
-
 
 
 @login_required
@@ -110,6 +111,9 @@ def add_product(request):
     }
 
     return render(request, template, context)
+
+
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
