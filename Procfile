@@ -1,1 +1,1 @@
-web: gunicorn surfparadise.wsgi:application
+web: gunicornsurfparadise.wsgi:application
