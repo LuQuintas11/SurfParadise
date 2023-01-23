@@ -10,7 +10,7 @@ html{
 .body{
     
     background-size: cover !important;
-    background: url('/media/body-image.jpeg') no-repeat center ;
+    background: url('/media/body-image.webp') no-repeat center ;
     height: calc(100vh - 164px);
    
 }
