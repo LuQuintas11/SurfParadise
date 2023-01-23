@@ -109,13 +109,11 @@
             </div>
         </div>
     </div>
-
+{% block review %}
     <div class="row">
-
         <div class="col card mb-4  mt-3 ">
             <h3 class="review-heading">Reviews:</h3>
             <div class="card-body">
-            
                 {% for review in product.reviews.all %}
                 <div class="review" style="padding: 10px;">
                     <p class="font-weight-bold">
@@ -130,6 +128,7 @@
             </div>
         </div>
     </div>
+{% endblock %}
     <div class="row">
         <div class="col card mb-4  mt-3 ">
             <div class="card-body">
@@ -138,7 +137,7 @@
                     {% csrf_token %}
             
                 <div>
-                    <label>Review</label>
+                    <label>Submit your review</label>
                     <textarea name="body"></textarea>
                 </div>
                 <div>

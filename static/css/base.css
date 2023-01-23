@@ -83,7 +83,13 @@ li{
     font-family: Caveat;
 }
 
+/*---messages---*/
 
+.message{
+
+    font-family: Caveat;
+    font-size: 25px;
+}
 
 /*----accounts----*/
 .signup{
@@ -92,6 +98,11 @@ li{
 
 .login{
     margin-bottom:150px;
+}
+
+
+.account{
+    margin-bottom: 300px;
 }
  
 .text-font{
@@ -141,9 +152,33 @@ a {
  .burger{
     display: none;
  }
+ .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right:0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: 0.5rem 0;
+    margin: 0.125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
 
+/*---Review----*/
 
-
+textarea {
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+}
 
 
 
@@ -168,8 +203,11 @@ a {
 }
 
 
-
-
+/*----icon---*/
+.fab, .far {
+    font-weight: 400;
+    font-size: 30px;
+}
 /*-----footer----*/
 footer {
     background-color: rgb(107 105 105);

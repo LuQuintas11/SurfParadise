@@ -102,7 +102,7 @@
                             </div>
                         </a>
                      
-                        <div class="dropdown-menu  " aria-labelledby="user-options">
+                        <div class="dropdown-menu"  aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
 
                                 <a href="" class="dropdown-item">My Profile</a>
@@ -144,20 +144,15 @@
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        <li{% if message.tags %} class="message {{ message.tags }}"{% endif %} >{{ message }}</li>
         {% endfor %}
     </ul>
+
     {% endif %}
     {% block content %}
     <!-- Content Goes here -->
     {% endblock content %}
 
-    {% block postloadjs %}
-    <script src="/static/js/app.js"></script>
-    <script type="text/javascript">
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
   </body>
 
   <footer>
@@ -182,7 +177,8 @@
     </div>
     <div class="col-4  column-footer">
     <h5>Social Media</h5>
-    <i class="fa-brands fa-square-facebook">kjnkjn</i>
+    <a class="text-white" href="https://www.facebook.com/" target="_blank"
+                aria-label="facebook"><i class="fab fa-facebook"></i></a>
     </div>
     </div>
     </div>
