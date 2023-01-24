@@ -70,6 +70,7 @@
                                         <option value="xl">XL</option>
                                     </select>
                                 </div>
+                        
                             {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
@@ -136,7 +137,7 @@
             </div>
         </div>
     </div>
-{% endblock review %}
+
 
 {% if user.is_authenticated %}
           <a href="{% url 'createreview' product.id %}" 
@@ -151,10 +152,13 @@
     href="{% url 'updatereview' review.id %}">
     Update
   </a>
-  <a class="btn btn-danger" 
-    href="#">Delete</a>
+  <a class="btn btn-danger"
+    href="{% url 'deletereview' review.id %}">
+    Delete
+  </a>
+  {% endif %}
 
-{% endif %}
+{% endblock review %}
 
             </div>
         </div>

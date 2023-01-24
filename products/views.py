@@ -53,19 +53,9 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
     favorite = bool(product.favourites.filter(id=request.user.id))
 
-    if request.method == 'POST':
-
-        body = request.POST.get('body', '')
-        
-        if body:
-            reviews = Review.objects.filter(product=product)
-            review = Review.objects.create(
-                    product=product,
-                    body=body,
-
-                )
-
-        return redirect('product_detail', product_id=product_id)
+    reviews = Review.objects.filter(product = product)
+    return render(request, 'products/product_detail.html', 
+                  {'product':product, 'reviews': reviews})
 
 
     context = {
@@ -157,7 +147,7 @@ def delete_product(request, product_id):
 
 
 
-
+@login_required
 def createreview(request, product_id):
     product = get_object_or_404(Product,pk=product_id) 
     if request.method == 'GET':
@@ -178,21 +168,27 @@ def createreview(request, product_id):
               'products/createreview.html', 
                 )
 
-
+@login_required
 def updatereview(request, review_id):
     review = get_object_or_404(Review,pk=review_id,user=request.user)
     if request.method == 'GET':
         form = ReviewForm(instance=review)
-        return render(request, 'updatereview.html', 
+        return render(request, 'products/updatereview.html', 
                       {'review': review,'form':form})
     else:
         try:
             form = ReviewForm(request.POST, 
               instance=review)
             form.save()
-            return redirect('product_detail', review.movie.id)
+            return redirect('product_detail', review.product.id)
         except ValueError:
             return render(request,
-              'updatereview.html',
-             {'review': review,'form':form,
-               'error':'Bad data in form'})
+              'products/updatereview.html',
+            )
+
+
+@login_required
+def deletereview(request, review_id):
+    review = get_object_or_404(Review, pk=review_id, user=request.user)
+    review.delete()
+    return redirect('product_detail', review.product.id)
