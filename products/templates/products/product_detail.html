@@ -116,6 +116,7 @@
             </div>
         </div>
     </div>
+ 
 {% block review %}
     <div class="row">
         <div class="col card mb-4  mt-3 ">
@@ -135,23 +136,25 @@
             </div>
         </div>
     </div>
-{% endblock %}
-    <div class="row">
-        <div class="col card mb-4  mt-3 ">
-            <div class="card-body">
-                {% if request.user.is_authenticated %}
-                <form method="post" action="{% url 'product_detail' product.id %}" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-            
-                <div>
-                    <label>Submit your review</label>
-                    <textarea name="body"></textarea>
-                </div>
-                <div>
-                    <button>Submit</button>
-                </div>
-            </form>
-                {% endif %}
+{% endblock review %}
+
+{% if user.is_authenticated %}
+          <a href="{% url 'createreview' product.id %}" 
+            class="btn btn-primary">
+            Add Review
+          </a>
+{% endif %}
+
+
+{% if user.is_authenticated and user == review.user %} 
+  <a class="btn btn-primary me-2" 
+    href="{% url 'updatereview' review.id %}">
+    Update
+  </a>
+  <a class="btn btn-danger" 
+    href="#">Delete</a>
+
+{% endif %}
 
             </div>
         </div>
@@ -159,8 +162,9 @@
 </div>
 </div>
 </div>
-{% endblock content %}
 
+
+{% endblock %} 
 
 {% block postloadjs %}
 {{ block.super }}

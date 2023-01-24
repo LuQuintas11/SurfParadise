@@ -8,6 +8,7 @@ from django.views.generic.edit import FormView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ProductForm
+from .forms import ReviewForm
 
 
 # Create your views here.
@@ -63,8 +64,6 @@ def product_detail(request, product_id):
                     body=body,
 
                 )
-        
-
 
         return redirect('product_detail', product_id=product_id)
 
@@ -75,6 +74,7 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'products/product_detail.html', context)
+
 
 
 @login_required
@@ -154,3 +154,45 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+
+
+def createreview(request, product_id):
+    product = get_object_or_404(Product,pk=product_id) 
+    if request.method == 'GET':
+        return render(request, 'products/createreview.html', 
+                      {'form':ReviewForm(), 'product':
+                        product})
+    else:
+        try:
+            form = ReviewForm(request.POST)
+            newReview = form.save(commit=False)
+            newReview.user = request.user
+            newReview.product = product
+            newReview.save()
+            return redirect('product_detail',
+              newReview.product.id)
+        except ValueError:
+            return render(request, 
+              'products/createreview.html', 
+                )
+
+
+def updatereview(request, review_id):
+    review = get_object_or_404(Review,pk=review_id,user=request.user)
+    if request.method == 'GET':
+        form = ReviewForm(instance=review)
+        return render(request, 'updatereview.html', 
+                      {'review': review,'form':form})
+    else:
+        try:
+            form = ReviewForm(request.POST, 
+              instance=review)
+            form.save()
+            return redirect('product_detail', review.movie.id)
+        except ValueError:
+            return render(request,
+              'updatereview.html',
+             {'review': review,'form':form,
+               'error':'Bad data in form'})

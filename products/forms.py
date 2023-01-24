@@ -1,6 +1,7 @@
-from .models import Review
 from django import forms
-from .models import Product, Category
+from django.forms import ModelForm, Textarea
+from .models import Product, Category, Review
+
 
 
 class ReviewForm(forms.ModelForm):
@@ -24,3 +25,17 @@ class ProductForm(forms.ModelForm):
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
+
+class ReviewForm(ModelForm):
+    def __init__(self, *args, **kwargs):
+        super(ModelForm, self).__init__(*args, 
+          **kwargs)
+
+    class Meta:
+        model = Review
+        fields = ['body']    
+       
+        widgets = {
+            'body': Textarea(attrs={'rows': 4}),
+        }
+

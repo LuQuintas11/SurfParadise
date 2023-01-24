@@ -26,9 +26,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # 'django-insecure-l55oq^%kl$9)vqebnlh6@%dp1_ufl*j$gs3t=z6vel7r#$ay2+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
+#'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ["localhost:8000", 'localhost', '127.0.0.1' ]
+ALLOWED_HOSTS = ["localhost:8000", 'localhost', '127.0.0.1', "surfparadise.herokuapp.com"]
 
 
 # Application definition
