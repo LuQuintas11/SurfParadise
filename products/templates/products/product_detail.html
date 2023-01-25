@@ -133,30 +133,33 @@
                     <!-- The body of the review goes before the | -->
                     {{ review.body | linebreaks }}
                 </div>
+
+                {% if user.is_authenticated %}
+                <a href="{% url 'createreview' product.id %}" 
+                  class="btn btn-primary">
+                  Add Review
+                </a>
+      {% endif %}
+      
+      
+      {% if user.is_authenticated and user == review.user %} 
+        <a class="btn btn-primary me-2" 
+          href="{% url 'updatereview' review.id %}">
+          Update
+        </a>
+        <a class="btn btn-danger"
+          href="{% url 'deletereview' review.id %}">
+          Delete
+        </a>
+        {% endif %}
+
                 {% endfor %}
             </div>
         </div>
     </div>
 
 
-{% if user.is_authenticated %}
-          <a href="{% url 'createreview' product.id %}" 
-            class="btn btn-primary">
-            Add Review
-          </a>
-{% endif %}
 
-
-{% if user.is_authenticated and user == review.user %} 
-  <a class="btn btn-primary me-2" 
-    href="{% url 'updatereview' review.id %}">
-    Update
-  </a>
-  <a class="btn btn-danger"
-    href="{% url 'deletereview' review.id %}">
-    Delete
-  </a>
-  {% endif %}
 
 {% endblock review %}
 
