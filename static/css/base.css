@@ -152,25 +152,7 @@ a {
  .burger{
     display: none;
  }
- .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right:0;
-    z-index: 1000;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: 0.5rem 0;
-    margin: 0.125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: 0.25rem;
-}
+
 
 /*---Review----*/
 
@@ -231,6 +213,11 @@ footer {
 }
 
 
+.list-inline-item{
+    padding:15px;
+}
+
+
 /*----media query---*/
 
 @media(max-width: 1150px){
@@ -282,16 +269,18 @@ white-space: nowrap;
 margin:0 auto;
 }
 
+.account-bag{
+    position: absolute;
+    right: 0px;
+   
+}
+.list-inline-item{
+font-size:0.8rem
 }
 
-.account-bag{
-        position: absolute;
-        right: 0px;
-       
-    }
-.list-inline-item{
-    font-size:0.8rem
 }
+
+
 
 
 
@@ -319,8 +308,8 @@ margin:0 auto;
     position: fixed;
     right:0;
 }
-.title{
-    margin-left:30px;
+.navbar-brand{
+    visibility: hidden;
 }
 
 
