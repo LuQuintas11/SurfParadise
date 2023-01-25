@@ -50,10 +50,12 @@ class Product(models.Model):
 
 class Review(models.Model):
     
-    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE,null=True, blank=True )
     email = models.EmailField(default="user")
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(
+      User,on_delete=models.CASCADE,null=True, blank=True )
    
 
    

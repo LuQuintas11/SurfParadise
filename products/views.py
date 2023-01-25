@@ -170,7 +170,8 @@ def createreview(request, product_id):
 
 @login_required
 def updatereview(request, review_id):
-    review = get_object_or_404(Review,pk=review_id,user=request.user)
+    review = get_object_or_404(
+      Review,pk=review_id,user=request.user)
     if request.method == 'GET':
         form = ReviewForm(instance=review)
         return render(request, 'products/updatereview.html', 
@@ -184,8 +185,8 @@ def updatereview(request, review_id):
         except ValueError:
             return render(request,
               'products/updatereview.html',
-            )
-
+             {'review': review,'form':form,
+               'error':'Bad data in form'})
 
 @login_required
 def deletereview(request, review_id):

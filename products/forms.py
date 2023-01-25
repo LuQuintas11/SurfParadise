@@ -4,10 +4,10 @@ from .models import Product, Category, Review
 
 
 
-class ReviewForm(forms.ModelForm):
-    class Meta:
-        model = Review
-        fields = ('body',)
+# class ReviewForm(forms.ModelForm):
+#     class Meta:
+#         model = Review
+#         fields = ('body',)
 
 
 
