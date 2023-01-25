@@ -85,17 +85,24 @@
                   
                 </li>
               </ul>
-        
+        <div class="form-container">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-        <li class="list-inline-item ">
-          <form class="form-inline my-2 my-lg-0"  method="GET" action="{% url 'products' %}">
-          
-            <input class=" form-control mr-sm-2" name="q"  type="search" placeholder="Search" aria-label="Search">
-            <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    
-          </form>
-            
-            </li>
+            <li class="list-inline-item dropdown">
+              <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <div class="text-center">
+                      <div><i class="fa-solid fa-magnifying-glass"></i></div>
+                      <p class="my-0">S</p>
+                  </div>
+              </a>
+              <div class="dropdown-menu"  aria-labelledby="user-options">
+                <form class="form-inline"  method="GET" action="{% url 'products' %}">
+                  <div class="input-group w-100">
+                  <input class=" form-control border border-black rounded-0" name="q"  type="search" placeholder="Search" aria-label="Search">
+                  <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form> 
+              </div>
+              </div>
+          </li>
               
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="{% url 'view_bag' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -134,6 +141,7 @@
                     </li>
                 </ul>
               </div>
+            </div>
                 <div class="burger">
                   <div class="line1"></div>
                   <div  class="line2"></div>
