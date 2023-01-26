@@ -22,14 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
-# 'django-insecure-l55oq^%kl$9)vqebnlh6@%dp1_ufl*j$gs3t=z6vel7r#$ay2+'
+SECRET_KEY = 'django-insecure-l55oq^%kl$9)vqebnlh6@%dp1_ufl*j$gs3t=z6vel7r#$ay2+'
+#os.environ.get('SECRET_KEY', '')
+# 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 #'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ["localhost:8000", 'localhost', '127.0.0.1', "surfparadise.herokuapp.com"]
+ALLOWED_HOSTS = [ 'surfparadise.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -137,13 +138,6 @@ else:
             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         }
     }
-# DATABASES = {
-#      'default': dj_database_url.parse('postgres://uirjiord:uoGYZwR5z3Zsv5_UpkE_GCrEtIgRLgiE@kandula.db.elephantsql.com/uirjiord')
-#  }
-    
-
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 

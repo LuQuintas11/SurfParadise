@@ -181,6 +181,7 @@ def updatereview(request, review_id):
             form = ReviewForm(request.POST, 
               instance=review)
             form.save()
+            messages.success(request, 'Successfully updated review!')
             return redirect('product_detail', review.product.id)
         except ValueError:
             return render(request,
@@ -192,4 +193,5 @@ def updatereview(request, review_id):
 def deletereview(request, review_id):
     review = get_object_or_404(Review, pk=review_id, user=request.user)
     review.delete()
+    messages.success(request, 'Successfully delete review!')
     return redirect('product_detail', review.product.id)

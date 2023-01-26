@@ -123,6 +123,12 @@
         <div class="col card mb-4  mt-3 ">
             <h3 class="review-heading">Reviews:</h3>
             <div class="card-body">
+                {% if user.is_authenticated %}
+                <a href="{% url 'createreview' product.id %}" 
+                  class="btn btn-primary">
+                  Add Review
+                </a>
+               {% endif %}
                 {% for review in product.reviews.all %}
                 <div class="review" style="padding: 10px;">
                     <p class="font-weight-bold">
@@ -134,12 +140,7 @@
                     {{ review.body | linebreaks }}
                 </div>
 
-                {% if user.is_authenticated %}
-                <a href="{% url 'createreview' product.id %}" 
-                  class="btn btn-primary">
-                  Add Review
-                </a>
-      {% endif %}
+        
       
       
       {% if user.is_authenticated and user == review.user %} 
