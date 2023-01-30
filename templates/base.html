@@ -168,41 +168,43 @@
     {% endblock content %}
 
 
+
+    <footer>
+      <h2 class="footer-title title">Surfer Paradise</h2>
+      <div class="container-footer">
+      <div class="row row-footer">
+      <div class="col-4 column-footer">
+      <h5>Shop</h5>
+      <ul>
+         <li><a href="{% url 'products' %}?category=Surfboard">Surfboards</li>
+         <li><a href="{% url 'products' %}?category=Women Wetsuit">Women Wetsuits</a></li>
+         <li><a href="{% url 'products' %}?category=Men Wetsuit">Men Wetsuits</a></li>
+         <li><a href="{% url 'products' %}?category=Fins">Fins</a></li>
+      </ul>
+      </div>
+      <div class="col-4 column-footer">
+      <h5>Info</h5>
+      <ul>
+        <li><a href="{% url 'contact' %}">Contact Us</a> </li>
+      </ul>
+      </div>
+      <div class="col-4  column-footer">
+      <h5>Social Media</h5>
+      <a class="text-white" href="https://www.facebook.com/" target="_blank"
+                  aria-label="facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+      </div>
+      </div>
+    </footer>
     
     {% block postloadjs %}
-    
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
     {% endblock %}
 
-    <script type="text/javascript" src="/static/js/app.js"></script>
- 
+    
+
     
   </body>
 
-  <footer>
-    <h2 class="footer-title title">Surfer Paradise</h2>
-    <div class="container-footer">
-    <div class="row row-footer">
-    <div class="col-4 column-footer">
-    <h5>Shop</h5>
-    <ul>
-       <li><a href="{% url 'products' %}?category=Surfboard">Surfboards</li>
-       <li><a href="{% url 'products' %}?category=Women Wetsuit">Women Wetsuits</a></li>
-       <li><a href="{% url 'products' %}?category=Men Wetsuit">Men Wetsuits</a></li>
-       <li><a href="{% url 'products' %}?category=Fins">Fins</a></li>
-    </ul>
-    </div>
-    <div class="col-4 column-footer">
-    <h5>Info</h5>
-    <ul>
-      <li><a href="{% url 'contact' %}">Contact Us</a> </li>
-    </ul>
-    </div>
-    <div class="col-4  column-footer">
-    <h5>Social Media</h5>
-    <a class="text-white" href="https://www.facebook.com/" target="_blank"
-                aria-label="facebook"><i class="fab fa-facebook"></i></a>
-    </div>
-    </div>
-    </div>
-  </footer>
+  
 </html>
