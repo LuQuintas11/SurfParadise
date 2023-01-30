@@ -213,61 +213,26 @@ footer {
 }
 
 
-.list-inline-item{
-    padding:15px;
-}
 
 
 /*----media query---*/
 
 @media(max-width: 1150px){
 
-.nav-links{
-        position: absolute;
-        left:0px;
-        height:50vh;
-        top:8vh;
-        background-color: #ffffff66;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(5%);
-        transition: transform 0.5s ease-in;
-    }
-
+.navbar{
+    height: auto;
+}
+.form-container{
+    position: absolute;
+    right:0;
+    top: 0;
+    
+}
 
 body{
     overflow-x: hidden;
 }
 
-.burger{
-    display: block;
-    position: absolute;
-    left: 0px;
-}
-
-.nav-links{
-    transform: translateX(0%);
-}
-
-.nav-link {
-    display: block;
-    padding: 0;
-}
-
-
-
-.navbar-brand{
-display: flex;
-padding-top: 0.3125rem;
-padding-bottom: 0.3125rem;
-margin-right: 1rem;
-font-size: 2rem;
-line-height: inherit;
-white-space: nowrap;
-margin:0 auto;
-}
 
 .account-bag{
     position: absolute;
@@ -304,13 +269,8 @@ font-size:0.8rem
     
 }
 
-.form-container{
-    position: fixed;
-    right:0;
-}
-.navbar-brand{
-    visibility: hidden;
-}
+
+
 
 
 }I  
