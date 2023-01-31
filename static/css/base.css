@@ -33,11 +33,11 @@ button{
    
 }
 
-/* .btt-link,
+ .btt-link,
 .update-link,
 .remove-item {
     cursor: pointer;
-} */
+} 
 
 .dropdown-toggle{
     border: none;
@@ -65,7 +65,7 @@ p{
 }
 
 /*----headings---*/
-h1{
+h1, h2{
     font-family: Caveat;
 }
 
@@ -98,6 +98,10 @@ li{
 
 .login{
     margin-bottom:150px;
+}
+
+.logout{
+    margin-bottom: 300px;
 }
 
 
