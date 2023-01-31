@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://surfparadise.herokuapp.com/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?category=Surfboard</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?category=Fins</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?category=Women%20Wetsuit</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?category=Men%20Wetsuit</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/contact/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/bag/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/?category=sales</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/185</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/205</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/201</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/184</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/204</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/188</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/195</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/193</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/191</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/194</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/212</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/203</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/210</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/211</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/213</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/207</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/217</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/206</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/209</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/215</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/216</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/208</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/products/214</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/185/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/205/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/201/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/184/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/204/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/188/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/195/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/193/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/191/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/194/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/212/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/203/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/210/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/211/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/213/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/207/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/217/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/206/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/209/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/215/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/216/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/208/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=/products/fav/214/</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F185%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F205%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F201%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F184%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F204%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F188%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F195%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F193%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F191%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F194%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F212%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F203%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F210%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F211%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F213%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F207%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F217%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F206%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F209%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F215%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F216%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F208%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/signup/?next=%2Fproducts%2Ffav%2F214%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F185%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F205%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F201%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F184%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F204%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F188%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F195%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F193%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F191%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F194%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F212%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F203%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F210%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F211%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F213%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F207%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F217%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F206%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F209%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F215%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F216%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F208%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://surfparadise.herokuapp.com/accounts/login/?next=%2Fproducts%2Ffav%2F214%2F</loc>
+  <lastmod>2023-01-31T04:42:06+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+
+
+</urlset>

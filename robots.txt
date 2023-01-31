@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /shoppingcart/
+Disallow: /profile/
+Disallow: /admin/
+Sitemap: https://surfparadise.herokuapp.com/sitemap.mxl
