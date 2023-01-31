@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ProductForm
 from .forms import ReviewForm
+import json
 
 
 # Create your views here.
@@ -68,29 +69,30 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, id=product_id)
-    favorite = bool(product.favourites.filter(id=request.user.id))
+    favorite = request.user in product.favourites.all()
 
     reviews = Review.objects.filter(product = product)
-    return render(request, 'products/product_detail.html', 
-                  {'product':product, 'reviews': reviews})
-
 
     context = {
         'product': product,
         'favorite': favorite,
+        'reviews': reviews
     }
-
     return render(request, 'products/product_detail.html', context)
+
+
+
 
 
 
 @login_required
 def favourite_add(request, id):
     product = get_object_or_404(Product, id=id)
-    if product.favourites.filter(id=request.user.id).exists():
+    if request.user in product.favourites.all():
         product.favourites.remove(request.user)
     else:
         product.favourites.add(request.user)
+    product.save()
     return HttpResponseRedirect(request.META['HTTP_REFERER'])
 
 
