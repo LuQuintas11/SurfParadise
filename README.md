@@ -1,11 +1,11 @@
 
 # Surf Paradise
 
- Surf Paradise is a fiypctional store designed and implemented with Django, Python, HTML, and CSS. It is about surf boards, wetsuit and accesories. Customer can search by category or description any product and purchase it. 
+ Surf Paradise is a fictional store designed and implemented with Django, Python, HTML, and CSS. It is about surf boards, wetsuit and accesories. Customer can search by category or description any product and purchase it. 
 
 You can find the link to the live website right here
 
-[screenshot]
+![screenshot](/media/website.png)
 
 
 ## Technologies used
@@ -322,5 +322,41 @@ The perfomance score in mobile is low. I read Perfomance Django Documentation to
 ## Deployment 
 
 ### Elephant SQL
+
+1. Create a data-base:
+ * Log in ElephantSQL.com 
+ * Create New Intance: Give a name
+                       Select the Tiny Turtle (free) plan
+
+#### Heroku
+
+1. Create new app
+2. Add the config var DATABASE_URL. Value: database url from ElephantSQ
+3. Open your app page -> Settings -> "Reveal Config Vars" and add the following:
+* DISABLE_COLLECTSTATIC, value :1 Remove this before deployed.
+* SECRET_KEY, value : use Djecrety to generate a random secret key.
+4. In settings.py:
+* DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+* SECRET_KEY = os.environ.get('SECRET_KEY')
+5. In order to be able to run the application on localhost, add SECRET_KEY and DATABASE_URL and their values to env.py
+6. Connect GitHub Repo to Heroku App
+
+
+
+#### Amazon Web Services (AWS) Storage
+
+1. All static and media files are stored with AWS S3
+
+2. Added to settings the next:
+![This is a image](/media/AWS.png)
+
+
+
+### Credits
+
+* The icons in the footer were taken from Font Awesome  https://fontawesome.com/start
+* The font-family was imported from https://fonts.google.com/
+* The pictures were taken from https://www.pexels.com/es-es/ 
+* I want to give credits to my tutor Sandeep Aggarwal and Oisin from tutoring sessions
 
 
