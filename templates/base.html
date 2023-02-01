@@ -63,11 +63,11 @@
                 All products
               </button>
               <div class="dropdown-menu">
-                <button class="dropdown-item"><a href="{% url 'products' %}?sort=price&direction=asc">By
+                <button class="dropdown-item"><a aria-label="sorting products by price"href="{% url 'products' %}?sort=price&direction=asc">By
                     Price</a></button>
-                <button class="dropdown-item"><a href="{% url 'products' %}?sort=category&direction=asc">By
+                <button class="dropdown-item"><a  aria-label="sorting products by category" href="{% url 'products' %}?sort=category&direction=asc">By
                     Category</a></button>
-                <button class="dropdown-item"><a href="{% url 'products' %}">All Products</a></button>
+                <button class="dropdown-item"><a aria-label ="all products" href="{% url 'products' %}">All Products</a></button>
               </div>
             </div>
           </li>
@@ -79,10 +79,10 @@
               </button>
               <div class="dropdown-menu">
                 <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Surfboards">SurfBoards</a></button>
+                    href="{% url 'products' %}?category=Surfboards" aria-label="sufboards category">SurfBoards</a></button>
 
                 <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Fins">Fins</a></button>
+                    href="{% url 'products' %}?category=Fins" aria-label="fins category">Fins</a></button>
               </div>
             </div>
           </li>
@@ -93,15 +93,15 @@
               </button>
               <div class="dropdown-menu">
                 <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Women Wetsuits">Women</a></button>
+                    href="{% url 'products' %}?category=Women Wetsuits" aria-label="women wetsuits">Women</a></button>
                 <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Men Wetsuits">Men</a></button>
+                    href="{% url 'products' %}?category=Men Wetsuits" aria-label="men wetsuit">Men</a></button>
               </div>
             </div>
           </li>
           <li class="nav-item">
             <button class="contact" type="button" aria-expanded="false">
-              <a href="{% url 'contact' %}">Contact Us</a>
+              <a href="{% url 'contact' %}"  aria-label="contact us">Contact Us</a>
             </button>
 
           </li>
@@ -115,13 +115,13 @@
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+              aria-expanded="false" aria-label="search">
               <div class="text-center">
                 <div><i class="fas fa-search"></i></div>
                 <span class="my-0">Search</span>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="user-options">
+            <div class="dropdown-menu" aria-labelledby="user-search">
               <form class="form-inline" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                   <input class=" form-control border border-black rounded-0" name="q" type="search" placeholder="Search"
@@ -143,13 +143,13 @@
 
             <div class="dropdown-menu " aria-labelledby="user-options">
               {% if request.user.is_authenticated %}
-              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+              <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="product management">Product Management</a>
+              <a href="{% url 'profile' %}" class="dropdown-item" aria-label="my profile">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="log out">Logout</a>
 
               {% else %}
-              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+              <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="register">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="log in">Login</a>
 
               {% endif %}
 
@@ -158,7 +158,7 @@
           </li>
           <li class="list-inline-item">
             <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-              href="{% url 'view_bag' %}">
+              href="{% url 'view_bag' %}" aria-label="shopping bag">
               <div>
                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                 <span>Bag</span>
