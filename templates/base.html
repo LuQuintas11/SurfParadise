@@ -9,21 +9,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="surf paradise">
-  <meta name="keywords" content="ecommerce, website, surfer, surfboards, wetsuit, fins">
+  <meta name="description" content="Surfboards and accesories online shop">
+  <meta name="keywords" content="ecommerce, website, surfer, surfboards, wetsuit, fins,surf shop, wetsuit, women wetsuit, men wetsuit, summer, online shop">
   {% endblock %}
 
-  {% block extra_meta %}
-  {% endblock %}
 
   {% block corecss %}
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  <link rel="preconnect" 
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
-  {% endblock %}
-
-  {% block extra_css %}
   {% endblock %}
 
   {% block corejs %}
@@ -41,8 +37,7 @@
 
   {% endblock %}
 
-  {% block extra_js %}
-  {% endblock %}
+
 
   <title> {% block extra_title %}Surfer Paradise{% endblock %}</title>
 </head>
@@ -63,11 +58,14 @@
                 All products
               </button>
               <div class="dropdown-menu">
-                <button class="dropdown-item"><a aria-label="sorting products by price"href="{% url 'products' %}?sort=price&direction=asc">By
-                    Price</a></button>
-                <button class="dropdown-item"><a  aria-label="sorting products by category" href="{% url 'products' %}?sort=category&direction=asc">By
-                    Category</a></button>
-                <button class="dropdown-item"><a aria-label ="all products" href="{% url 'products' %}">All Products</a></button>
+                <a class="dropdown-item" aria-label="sorting products by price"
+                    href="{% url 'products' %}?sort=price&direction=asc">By
+                    Price</a>
+                <a class="dropdown-item" aria-label="sorting products by category"
+                    href="{% url 'products' %}?sort=category&direction=asc">By
+                    Category</a>
+                <a class="dropdown-item" aria-label="all products" href="{% url 'products' %}">All
+                    Products</a>
               </div>
             </div>
           </li>
@@ -78,11 +76,9 @@
                 Surfboards
               </button>
               <div class="dropdown-menu">
-                <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Surfboards" aria-label="sufboards category">SurfBoards</a></button>
+                <a class="dropdown-item" href="{% url 'products' %}?category=Surfboards" aria-label="sufboards category">SurfBoards</a>
 
-                <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Fins" aria-label="fins category">Fins</a></button>
+                <a class="dropdown-item" href="{% url 'products' %}?category=Fins" aria-label="fins category">Fins</a>
               </div>
             </div>
           </li>
@@ -92,17 +88,15 @@
                 Wetsuit
               </button>
               <div class="dropdown-menu">
-                <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Women Wetsuits" aria-label="women wetsuits">Women</a></button>
-                <button class="dropdown-item" type="button"><a
-                    href="{% url 'products' %}?category=Men Wetsuits" aria-label="men wetsuit">Men</a></button>
+                <a class="dropdown-item" href="{% url 'products' %}?category=Women%20Wetsuits" aria-label="women wetsuits">Women</a>
+                <a class="dropdown-item" href="{% url 'products' %}?category=Men%20Wetsuits" aria-label="men wetsuit">Men</a>
               </div>
             </div>
           </li>
-          <li class="nav-item">
-            <button class="contact" type="button" aria-expanded="false">
-              <a href="{% url 'contact' %}"  aria-label="contact us">Contact Us</a>
-            </button>
+          <li class="nav-item contact-item">
+
+            <a class="contactTitle" href="{% url 'contact' %}" aria-label="contact us">Contact Us</a>
+
 
           </li>
         </ul>
@@ -114,36 +108,37 @@
       <div class="form-container">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#"  data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false" aria-label="search">
+            <a class="text-black nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+              aria-label="search">
               <div class="text-center">
                 <div><i class="fas fa-search"></i></div>
                 <span class="my-0">Search</span>
               </div>
             </a>
-            <div class="dropdown-menu" aria-labelledby="user-search">
+            <div class="dropdown-menu">
               <form class="form-inline" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
                   <input class=" form-control border border-black rounded-0" name="q" type="search" placeholder="Search"
                     aria-label="Search">
                   <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </div>
               </form>
             </div>
 
           </li>
 
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="{% url 'view_bag' %}"  data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
+            <a class="text-black nav-link" href="{% url 'view_bag' %}" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
               <div class="text-center">
                 <div><i class="fas fa-user fa-lg"></i></div>
                 <span>Account</span>
               </div>
             </a>
 
-            <div class="dropdown-menu " aria-labelledby="user-options">
+            <div class="dropdown-menu ">
               {% if request.user.is_authenticated %}
-              <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="product management">Product Management</a>
+              <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="product management">Product Admin</a>
               <a href="{% url 'profile' %}" class="dropdown-item" aria-label="my profile">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="log out">Logout</a>
 
@@ -174,7 +169,6 @@
           </li>
         </ul>
       </div>
-      </div>
 
     </nav>
   </header>
@@ -193,7 +187,7 @@
 
 
   <footer>
-    <h2 class="footer-title title">Surfer Paradise</h2>
+    <h2 class="footer-title title"><a href="{% url 'home' %}">Surfer Paradise</a></h2>
     <div class="container-footer">
       <div class="row row-footer">
         <div class="col-4 column-footer">
@@ -202,9 +196,9 @@
             <li>
               <a href="{% url 'products' %}?category=Surfboards" aria-label="category sufboards">Surfboards</a></li>
             <li>
-              <a href="{% url 'products' %}?category=Women Wetsuits" aria-label="women wetsuits">Women Wetsuits</a></li>
+              <a href="{% url 'products' %}?category=Women%20Wetsuits" aria-label="women wetsuits">Women Wetsuits</a></li>
             <li>
-              <a href="{% url 'products' %}?category=Men Wetsuits" aria-label="men wetsuits">Men Wetsuits</a></li>
+              <a href="{% url 'products' %}?category=Men%20Wetsuits" aria-label="men wetsuits">Men Wetsuits</a></li>
             <li>
               <a href="{% url 'products' %}?category=Fins" aria-label="category fins">Fins</a></li>
           </ul>

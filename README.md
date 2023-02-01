@@ -35,31 +35,29 @@ You can find the link to the live website right here
 
 ### Project Sprints
 
-[screenshot]
+![screenshot](/media/userstories.png)
 
 ### User Stories
 
 I used Github user stories to keep track of the features that were already done and the ones I had to do
 
-[screenshoot]
-
 
 #### As a shopper I want to be able to: 
-                                            register a profile 
-                                            log in and log out
-                                            search products in the website
-                                            filter products by category and price
-                                            see a list of products
-                                            see the details of a products
-                                            see/edit/delete reviews 
-                                            add favourites products
-                                            add products in my bag by quantity and size
-                                            edit/delete products in my bag
-                                            edit quantities in my bag
-                                            checkout and set delivery and payments details 
-                                            receive confirmation of my payment
+                                            Register a profile 
+                                            Log in and log out
+                                            Search products in the website
+                                            Filter products by category and price
+                                            See a list of products
+                                            See the details of a products
+                                            See/edit/delete reviews 
+                                            Add favourites products
+                                            Add products in my bag by quantity and size
+                                            Edit/delete products in my bag
+                                            Edit quantities in my bag
+                                            Checkout and set delivery and payments details 
+                                            Receive confirmation of my payment
 #### As a admin I want to be able to:
-                                            add/edit/delete products
+                                            Add/edit/delete products
 
                  
 
@@ -67,7 +65,7 @@ I used Github user stories to keep track of the features that were already done 
 
 ### Site Map
 
-[screentshot]
+![screentshot](/media/SITE%20MAP.png)
 
 
 
@@ -77,18 +75,28 @@ I listed short and long tail words:
 
 Short-tail words:
 
-
-
+* Surf Shop
+* Surf Board
+* Surf Accesories
+* Beach
+* Holidays
+* Wetsuits
+* Waves
 
 Long-tail words:
 
+* Where can I buy a surfboard?
+* What I need to start surfing?
+* How much surf suppliers cost?
+* Which activities can I do on holidays?
+* Surf shops near me
 
 
 I used word tracker and Google search to narrow them down. I chose the ones with more relevance. I included this words in headers and meta tags
 
 
-
-[screenshot]
+![This is an image](/media/WordTracker.png)
+![This is an image](/media/GoogleSearch.png)
 
 
 ### Social Media
@@ -104,46 +112,148 @@ I created a facebook page:
 
 
 
-## Features 
+# Wireframes and Features 
 
-### Common to All Pages
+## Common to All Pages
 
-#### Navbar
+### Navbar
 
-Between Mobile and Desktop there is a slightly difference. Mobile does not have search option. 
+#### Features:
+* Home page logo
+* Login/logout links
+* Search bar
+* Shopping bag
+* Product management links ( as a admin user)
+ 
+Desktop:
 
-Mobile
+![This is a image](/media/navdesktop.png)
 
-Desktop
+Mobile:
 
+![This is a image](/media/navmobile.png)
 
 ### Footer
 
-It has social media, contact form and links to have access to the products
+#### Features:
+* Home page logo
+* All products list
+* Contact us form
+* Social media link
+
+Desktop:
+![This is a image](/media/footerdesktop.png)
+
+Mobile:
+
+![This is a image](/media/footermobile.png)
 
 
 ### All products
 
-[screenshot]
+#### Features:
+* List of products
+* Summary of each products 
+* Edit/delete button(log in as a admin)
+
+Desktop:
+
+![This is a image](/media/allproductsdesktop.png)
+
+Mobile:
+
+![This is a image](/media/allproductsmobile.png)
 
 ### Product details
-As an original custome a create a favourite button
-[screenshot]
+
+#### Features:
+* Product details listed discription, sizes and quantity. As an original custome a create a favourite button
+* Edit/delete button (login as admin)
+* Add/edit/delete review
+
+
+![This is a image](/media/addfavourite.png)
+
+![This is a image](/media/removefavourite.png)
+
+![This is a image](/media/review.png)
 
 ### Shopping bag
 
+#### Features:
+* List of products
+* Quantity button
+* Update/remove product button
+* Keep shopping button
+* Checkout button 
+
+Desktop:
+![This is a image](/media/shoppingbag.png)
+
+
+Mobile:
+
+![This is a image](/media/shoppingbagmobile.png)
+
+
+### Checkout page
+
+#### Features:
+* Form to fill out payment method
+* Form to fill out delivery address
+* Checkout button
+* Adjust bag button
+
+Desktop:
+
+![This is a image](/media/checkout.png)
+
+Mobile:
+
+![This is a image](/media/checkoutmobile.png)
 
 ### Product admin
 
+#### Features:
+* Add/edit/delete products
+
+![This is a image](/media/admin.png)
+
+Desktop:
+
+![This is a image](/media/admin.png)
+
+Mobile:
+
+![This is a image](/media/adminmobile.png)
 
 
-## Social media
+### Profile
+
+#### Features:
+* Update profile information
+* View purchase history 
+
+
+Desktop:
+
+![This is a image](/media/myprofile.png)
+
+Mobile:
+
+![This is a image](/media/profilemobile.png)
+
 
 
 ## Contact form
 
+Desktop:
 
+![This is a image](/media/contactusdesktop.png)
 
+Mobile:
+
+![This is a image](/media/Contactus.png)
 
 
 
@@ -171,6 +281,15 @@ During the development process, I was manually testing in the following ways:
 
 ## Code Validation 
 
+* HTML validator:
+![This is a image](/media/baseIndex.png)
+
+* CSS validator:
+![This is a image](/media/cssvalidator.png)
+
+* I run python3 -m flake8  and psycodestyle to validate python:
+It recommended shortening lines of code. Not all could be shortened
+
 
 
 ## Post Development Testing
@@ -181,18 +300,20 @@ I ran the tests for both mobile and desktop.
 
 Mobile:
 
+![This is a image](/media/LigthouseMobile.png)
+
 
 Desktop:
 
-The perfomance score in both is  low. I read Perfomance Django Documentation to know how to improve the performance. The sujestion were:
+![This is a image](/media/LigthouseDesktop.png)
+
+The perfomance score in mobile is low. I read Perfomance Django Documentation to know how to improve the performance. The sujestion were:
 
 1. Reduce unused JavaScript code: I do not have unused code in my project
 
-2. Use an appropriate size for images: The images were reduce 
+2. Remove resources that block rendering: it suggests tagging stylesheet link with disable or media attribute but this brings consequences when I want to render the website. 
 
-3. Remove resources that block rendering: it suggests tagging stylesheet link with disable or media attribute but this brings consequences when I want to render the website. 
-
-4. Reduce server response time: DJango documentation suggests several things to improve this like:
+3. Reduce server response time: DJango documentation suggests several things to improve this like:
      Use caching: I did set caching in the setting file. This improve the perfomance but I have to remove it because it was compromising the log in.
      Reduce Queries: I  went through my code and I did noy find the way to reduce the amount of queries 
 
