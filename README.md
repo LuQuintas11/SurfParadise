@@ -101,8 +101,8 @@ I used word tracker and Google search to narrow them down. I chose the ones with
 
 ### Social Media
 
-I created a facebook page:
-[screnshot]
+I created a facebook page: https://www.facebook.com/profile.php?id=100090135453589
+
 
 
 
