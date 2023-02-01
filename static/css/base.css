@@ -205,6 +205,9 @@ footer {
     background-color: rgb(176 172 172);
     font-family: Quicksand;
     font-weight: 700;
+    position: absolute;
+    right: 0;
+    left: 0;
 
 }
 
@@ -283,6 +286,9 @@ footer {
 
     }
 
+    .list-inline-item {
+        font-size: 0.6rem
+    }
 
 }
 
