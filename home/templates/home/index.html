@@ -2,32 +2,33 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <div class="body">
-<div class="container h-100">
-  <div class="row h-100">
-      <div class="col-7 col-md-6 my-auto">
-        <h1 class="display-4 text-font logo-font">
-            Summer sale is here!
-        </h1>
-          <div class="my-5">
-              <h4>
-                 <a href="{% url 'products' %}?category=sales" class="sale-button btn btn-lg rounded-0 text-uppercase py-3">Sales!</a>
-              </h4>
-          </div>
-      </div>
-  </div>
-</div>
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-4 text-font logo-font">
+                    Summer sale is here!
+                </h1>
+                <div class="my-5">
+                    <h4>
+                        <a href="{% url 'products' %}?category=sales"
+                            class="sale-button btn btn-lg rounded-0 text-uppercase py-3">Sales!</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-    
+
 {% endblock %}
 
 {% block postloadjs %}

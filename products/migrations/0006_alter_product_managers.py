@@ -6,13 +6,12 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0005_alter_product_managers'),
+        ("products", "0005_alter_product_managers"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='product',
-            managers=[
-            ],
+            name="product",
+            managers=[],
         ),
     ]

@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0012_review_rating'),
+        ("products", "0012_review_rating"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='review',
-            name='rating',
+            model_name="review",
+            name="rating",
         ),
         migrations.AddField(
-            model_name='review',
-            name='name',
-            field=models.CharField(default='lu', max_length=254),
+            model_name="review",
+            name="name",
+            field=models.CharField(default="lu", max_length=254),
         ),
     ]

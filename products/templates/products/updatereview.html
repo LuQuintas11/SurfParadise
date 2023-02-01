@@ -8,8 +8,7 @@
           Update Review for {{ review.movie.title }}
         </h5>
         {% if error %}
-        <div class="alert alert-danger mt-3" 
-          role="alert">
+        <div class="alert alert-danger mt-3" role="alert">
           {{ error }}
         </div>
         {% endif %}
@@ -17,8 +16,7 @@
           <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <button type="submit" 
-              class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
               Update Review
             </button>
           </form>

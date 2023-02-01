@@ -7,22 +7,29 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Contact',
+            name="Contact",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('full_name', models.CharField(max_length=50)),
-                ('email', models.EmailField(max_length=254)),
-                ('contact_number', models.CharField(max_length=20)),
-                ('order_number', models.CharField(blank=True, max_length=50)),
-                ('message', models.TextField(max_length=300)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("full_name", models.CharField(max_length=50)),
+                ("email", models.EmailField(max_length=254)),
+                ("contact_number", models.CharField(max_length=20)),
+                ("order_number", models.CharField(blank=True, max_length=50)),
+                ("message", models.TextField(max_length=300)),
             ],
             options={
-                'verbose_name_plural': 'Customer Enquiries',
+                "verbose_name_plural": "Customer Enquiries",
             },
         ),
     ]

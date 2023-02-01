@@ -2,98 +2,111 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
 
-    {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="surf paradise">
-        <meta name="keywords" content="ecommerce, website, surfer, surfboards, wetsuit, fins">
-    {% endblock %}
+<head>
 
-    {% block extra_meta %}
-    {% endblock %}
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="surf paradise">
+  <meta name="keywords" content="ecommerce, website, surfer, surfboards, wetsuit, fins">
+  {% endblock %}
 
-    {% block corecss %}
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}" >
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+  {% block corecss %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
 
-    {% block corejs %}
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-         <!-- Stripe -->
-         <script src="https://js.stripe.com/v3/"></script>
-     
-        {% endblock %}
+  {% block extra_css %}
+  {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <!-- Stripe -->
+  <script src="https://js.stripe.com/v3/"></script>
 
-    <title> {% block extra_title %}Surfer Paradise{% endblock %}</title>
-  </head>
-    
-  <body>
+  {% endblock %}
 
-    <header>
-      <nav class="navbar navbar-expand-lg">
-        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
-            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
-             class="fas fa-bars fa-1x"></i></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-            <a class="navbar-brand title" href="{% url 'home' %}">Surfer Paradise</a>
-            <ul class="navbar-nav nav-links mr-auto mt-2 mt-lg-0">
-              <li class="nav-item active">
-                <div class="dropdown">
-                  <button class=" dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                    All products
-                  </button>
-                  <div class="dropdown-menu">
-                    <button class="dropdown-item"><a href="{% url 'products' %}?sort=price&direction=asc">By Price</a></button>
-                    <button class="dropdown-item"><a href="{% url 'products' %}?sort=category&direction=asc">By Category</a></button>
-                    <button class="dropdown-item"><a href="{% url 'products' %}">All Products</a></button>
-                  </div>
-                  </div>
-              </li>
+  {% block extra_js %}
+  {% endblock %}
 
-              <li class="nav-item ">
-                <div class="dropdown">
-                  <button class="  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                    Surfboards
-                  </button>
-                  <div class="dropdown-menu">
-                    <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Surfboard">SurfBoards</a></button>
-            
-                    <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Fins">Fins</a></button>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="dropdown">
-                  <button class=" dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                    Wetsuit
-                  </button>
-                  <div class="dropdown-menu">
-                    <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Women Wetsuit">Women</a></button>
-                    <button class="dropdown-item" type="button"><a href="{% url 'products' %}?category=Men Wetsuit">Men</a></button>
-                  </div>
-                  </div>
-                </li>
-              <li class="nav-item">
-                  <button  class="contact" type="button"  aria-expanded="false">
-                    <a href="{% url 'contact' %}">Contact Us</a>
-                  </button>
-                
-              </li>
-            </ul>
-          </div>
+  <title> {% block extra_title %}Surfer Paradise{% endblock %}</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="dark-blue-text"><i class="fas fa-bars fa-1x"></i></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+        <a class="navbar-brand title" href="{% url 'home' %}">Surfer Paradise</a>
+        <ul class="navbar-nav nav-links mr-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <div class="dropdown">
+              <button class=" dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                All products
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item"><a href="{% url 'products' %}?sort=price&direction=asc">By
+                    Price</a></button>
+                <button class="dropdown-item"><a href="{% url 'products' %}?sort=category&direction=asc">By
+                    Category</a></button>
+                <button class="dropdown-item"><a href="{% url 'products' %}">All Products</a></button>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item ">
+            <div class="dropdown">
+              <button class="  dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Surfboards
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" type="button"><a
+                    href="{% url 'products' %}?category=Surfboards">SurfBoards</a></button>
+
+                <button class="dropdown-item" type="button"><a
+                    href="{% url 'products' %}?category=Fins">Fins</a></button>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <button class=" dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Wetsuit
+              </button>
+              <div class="dropdown-menu">
+                <button class="dropdown-item" type="button"><a
+                    href="{% url 'products' %}?category=Women Wetsuits">Women</a></button>
+                <button class="dropdown-item" type="button"><a
+                    href="{% url 'products' %}?category=Men Wetsuits">Men</a></button>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="contact" type="button" aria-expanded="false">
+              <a href="{% url 'contact' %}">Contact Us</a>
+            </button>
+
+          </li>
+        </ul>
+      </div>
 
 
 
@@ -101,116 +114,120 @@
       <div class="form-container">
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="text-center">
-                    <div><i class="fas fa-search"></i></div>
-                    <span class="my-0">Search</span>
-                </div>
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-search"></i></div>
+                <span class="my-0">Search</span>
+              </div>
             </a>
-            <div class="dropdown-menu"  aria-labelledby="user-options">
-              <form class="form-inline"  method="GET" action="{% url 'products' %}">
+            <div class="dropdown-menu" aria-labelledby="user-options">
+              <form class="form-inline" method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                <input class=" form-control border border-black rounded-0" name="q"  type="search" placeholder="Search" aria-label="Search">
-                <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form> 
+                  <input class=" form-control border border-black rounded-0" name="q" type="search" placeholder="Search"
+                    aria-label="Search">
+                  <button class=" btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
             </div>
 
-        </li>
-            
-                  <li class="list-inline-item dropdown">
-                      <a class="text-black nav-link" href="{% url 'view_bag' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <div class="text-center">
-                              <div><i class="fas fa-user fa-lg"></i></div>
-                              <span>Account</span>
-                          </div>
-                      </a>
-            
-                      <div class="dropdown-menu "   aria-labelledby="user-options">
-                          {% if request.user.is_authenticated %}
-                              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                      
-                          {% else %}
-                              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+          </li>
 
-                          {% endif %}
+          <li class="list-inline-item dropdown">
+            <a class="text-black nav-link" href="{% url 'view_bag' %}" id="user-options" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <div class="text-center">
+                <div><i class="fas fa-user fa-lg"></i></div>
+                <span>Account</span>
+              </div>
+            </a>
 
-                      
-                   </div>
-                  </li>
-                  <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                          <div>
-                              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                              <span>Bag</span>
-                              <p class="my-0">
-                                  {% if grand_total %}
-                                      ${{ grand_total|floatformat:2 }}
-                                  {% else %}
-                                  <i class="fa-solid fa-cart-shopping"></i>
-                                  {% endif %}
-                              </p>
-                          </div>
-                      </a>
-                  </li>
-              </ul>
+            <div class="dropdown-menu " aria-labelledby="user-options">
+              {% if request.user.is_authenticated %}
+              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+              <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+
+              {% else %}
+              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+
+              {% endif %}
+
+
             </div>
-          </div>
-           
-</nav>
+          </li>
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+              href="{% url 'view_bag' %}">
+              <div>
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <span>Bag</span>
+                <p class="my-0">
+                  {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+
+    </nav>
   </header>
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} class="message {{ message.tags }}"{% endif %} >{{ message }}</li>
-        {% endfor %}
-    </ul>
+  {% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="message {{ message.tags }}" {% endif %}>{{ message }}</li>
+      {% endfor %}
+  </ul>
 
-    {% endif %}
-    {% block content %}
-    <!-- Content Goes here -->
-    {% endblock content %}
+  {% endif %}
+  {% block content %}
+  <!-- Content Goes here -->
+  {% endblock content %}
 
 
 
-    <footer>
-      <h2 class="footer-title title">Surfer Paradise</h2>
-      <div class="container-footer">
+  <footer>
+    <h2 class="footer-title title">Surfer Paradise</h2>
+    <div class="container-footer">
       <div class="row row-footer">
-      <div class="col-4 column-footer">
-      <h5>Shop</h5>
-      <ul>
-         <li><a href="{% url 'products' %}?category=Surfboard">Surfboards</li>
-         <li><a href="{% url 'products' %}?category=Women Wetsuit">Women Wetsuits</a></li>
-         <li><a href="{% url 'products' %}?category=Men Wetsuit">Men Wetsuits</a></li>
-         <li><a href="{% url 'products' %}?category=Fins">Fins</a></li>
-      </ul>
+        <div class="col-4 column-footer">
+          <h5>Shop</h5>
+          <ul>
+            <li><a href="{% url 'products' %}?category=Surfboard">Surfboards</li>
+            <li><a href="{% url 'products' %}?category=Women Wetsuit">Women Wetsuits</a></li>
+            <li><a href="{% url 'products' %}?category=Men Wetsuit">Men Wetsuits</a></li>
+            <li><a href="{% url 'products' %}?category=Fins">Fins</a></li>
+          </ul>
+        </div>
+        <div class="col-4 column-footer">
+          <h5>Info</h5>
+          <ul>
+            <li><a href="{% url 'contact' %}">Contact Us</a> </li>
+          </ul>
+        </div>
+        <div class="col-4  column-footer">
+          <h5>Social Media</h5>
+          <a class="text-white" href="https://www.facebook.com/" target="_blank" aria-label="facebook"><i
+              class="fab fa-facebook"></i></a>
+        </div>
       </div>
-      <div class="col-4 column-footer">
-      <h5>Info</h5>
-      <ul>
-        <li><a href="{% url 'contact' %}">Contact Us</a> </li>
-      </ul>
-      </div>
-      <div class="col-4  column-footer">
-      <h5>Social Media</h5>
-      <a class="text-white" href="https://www.facebook.com/" target="_blank"
-                  aria-label="facebook"><i class="fab fa-facebook"></i></a>
-      </div>
-      </div>
-      </div>
-    </footer>
-    
-    {% block postloadjs %}
-    
-    {% endblock %}
+    </div>
+  </footer>
 
-    
+  {% block postloadjs %}
 
-    
-  </body>
+  {% endblock %}
 
-  
+
+
+
+</body>
+
+
 </html>

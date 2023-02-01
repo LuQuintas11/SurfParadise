@@ -7,30 +7,50 @@ import django_countries.fields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0015_auto_20230125_1744'),
+        ("products", "0015_auto_20230125_1744"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Order',
+            name="Order",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('order_number', models.CharField(editable=False, max_length=32)),
-                ('full_name', models.CharField(max_length=50)),
-                ('email', models.EmailField(max_length=254)),
-                ('phone_number', models.CharField(max_length=20)),
-                ('country', django_countries.fields.CountryField(max_length=2)),
-                ('postcode', models.CharField(blank=True, max_length=20, null=True)),
-                ('town_or_city', models.CharField(max_length=40)),
-                ('street_address1', models.CharField(max_length=80)),
-                ('street_address2', models.CharField(blank=True, max_length=80, null=True)),
-                ('county', models.CharField(blank=True, max_length=80, null=True)),
-                ('date', models.DateTimeField(auto_now_add=True)),
-                ('delivery_cost', models.DecimalField(decimal_places=2, default=0, max_digits=6)),
-                ('order_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
-                ('grand_total', models.DecimalField(decimal_places=2, default=0, max_digits=10)),
-                ('original_bag', models.TextField(default='')),
-                ('stripe_pid', models.CharField(default='', max_length=254)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("order_number", models.CharField(editable=False, max_length=32)),
+                ("full_name", models.CharField(max_length=50)),
+                ("email", models.EmailField(max_length=254)),
+                ("phone_number", models.CharField(max_length=20)),
+                ("country", django_countries.fields.CountryField(max_length=2)),
+                ("postcode", models.CharField(blank=True, max_length=20, null=True)),
+                ("town_or_city", models.CharField(max_length=40)),
+                ("street_address1", models.CharField(max_length=80)),
+                (
+                    "street_address2",
+                    models.CharField(blank=True, max_length=80, null=True),
+                ),
+                ("county", models.CharField(blank=True, max_length=80, null=True)),
+                ("date", models.DateTimeField(auto_now_add=True)),
+                (
+                    "delivery_cost",
+                    models.DecimalField(decimal_places=2, default=0, max_digits=6),
+                ),
+                (
+                    "order_total",
+                    models.DecimalField(decimal_places=2, default=0, max_digits=10),
+                ),
+                (
+                    "grand_total",
+                    models.DecimalField(decimal_places=2, default=0, max_digits=10),
+                ),
+                ("original_bag", models.TextField(default="")),
+                ("stripe_pid", models.CharField(default="", max_length=254)),
             ],
         ),
     ]

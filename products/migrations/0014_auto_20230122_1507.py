@@ -6,17 +6,17 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0013_auto_20230122_1505'),
+        ("products", "0013_auto_20230122_1505"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='review',
-            name='name',
+            model_name="review",
+            name="name",
         ),
         migrations.AddField(
-            model_name='review',
-            name='email',
-            field=models.EmailField(default='false', max_length=254),
+            model_name="review",
+            name="email",
+            field=models.EmailField(default="false", max_length=254),
         ),
     ]

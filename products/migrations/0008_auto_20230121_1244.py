@@ -6,20 +6,20 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0007_auto_20230121_1216'),
+        ("products", "0007_auto_20230121_1216"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='review',
-            name='approved',
+            model_name="review",
+            name="approved",
         ),
         migrations.RemoveField(
-            model_name='review',
-            name='email',
+            model_name="review",
+            name="email",
         ),
         migrations.RemoveField(
-            model_name='review',
-            name='name',
+            model_name="review",
+            name="name",
         ),
     ]

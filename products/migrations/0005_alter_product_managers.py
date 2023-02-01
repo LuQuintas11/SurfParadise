@@ -7,14 +7,14 @@ import django.db.models.manager
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0004_product_favourites'),
+        ("products", "0004_product_favourites"),
     ]
 
     operations = [
         migrations.AlterModelManagers(
-            name='product',
+            name="product",
             managers=[
-                ('newmanager', django.db.models.manager.Manager()),
+                ("newmanager", django.db.models.manager.Manager()),
             ],
         ),
     ]
