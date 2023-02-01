@@ -1,6 +1,5 @@
 from django.shortcuts import (
     render,
-    redirect,
     reverse,
     get_object_or_404,
     HttpResponseRedirect,
@@ -15,11 +14,6 @@ from django.views.generic.edit import FormView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .forms import ProductForm
-from .forms import ReviewForm
-import json
-
-
-# Create your views here.
 
 
 def all_products(request):
@@ -55,10 +49,10 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria!")  # noqa
                 return redirect(reverse("products"))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)  # noqa
             products = products.filter(queries)
 
     context = {
@@ -108,7 +102,8 @@ def add_product(request):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to add product. Please ensure the form is valid."
+                request,
+                "Failed to add product. Please ensure the form is valid."
             )
     else:
         form = ProductForm()
@@ -137,7 +132,8 @@ def edit_product(request, product_id):
             return redirect(reverse("product_detail", args=[product.id]))
         else:
             messages.error(
-                request, "Failed to update product. Please ensure the form is valid."
+                request,
+                "Failed to update product. Please ensure the form is valid."
             )
     else:
         form = ProductForm(instance=product)
@@ -195,7 +191,7 @@ def updatereview(request, review_id):
     if request.method == "GET":
         form = ReviewForm(instance=review)
         return render(
-            request, "products/updatereview.html", {"review": review, "form": form}
+            request, "products/updatereview.html", {"review": review, "form": form}  # noqa
         )
     else:
         try:

@@ -3,12 +3,6 @@ from django.forms import ModelForm, Textarea
 from .models import Product, Category, Review
 
 
-# class ReviewForm(forms.ModelForm):
-#     class Meta:
-#         model = Review
-#         fields = ('body',)
-
-
 class ProductForm(forms.ModelForm):
     class Meta:
         model = Product

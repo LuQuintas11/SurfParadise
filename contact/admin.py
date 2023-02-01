@@ -5,7 +5,9 @@ from .models import Contact
 
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ("full_name", "email", "contact_number", "order_number", "message")
+    list_display = (
+        "full_name", "email", "contact_number", "order_number", "message"
+        )  
 
     ordering = ("full_name", "order_number")
 

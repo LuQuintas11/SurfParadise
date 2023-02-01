@@ -1,15 +1,7 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome LuQuintas11,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
 # Surf Paradise
 
- Surf Paradise is a finctional store designed and implemented with Django, Python, HTML, and CSS. It is about surf boards, wetsuit and accesories. Customer can search by category or description any product and purchase it. 
+ Surf Paradise is a fiypctional store designed and implemented with Django, Python, HTML, and CSS. It is about surf boards, wetsuit and accesories. Customer can search by category or description any product and purchase it. 
 
 You can find the link to the live website right here
 
@@ -40,11 +32,73 @@ You can find the link to the live website right here
 
 ## Agile thinking
 
+
+### Project Sprints
+
+[screenshot]
+
 ### User Stories
 
 I used Github user stories to keep track of the features that were already done and the ones I had to do
 
 [screenshoot]
+
+
+#### As a shopper I want to be able to: 
+                                            register a profile 
+                                            log in and log out
+                                            search products in the website
+                                            filter products by category and price
+                                            see a list of products
+                                            see the details of a products
+                                            see/edit/delete reviews 
+                                            add favourites products
+                                            add products in my bag by quantity and size
+                                            edit/delete products in my bag
+                                            edit quantities in my bag
+                                            checkout and set delivery and payments details 
+                                            receive confirmation of my payment
+#### As a admin I want to be able to:
+                                            add/edit/delete products
+
+                 
+
+## Estructure
+
+### Site Map
+
+[screentshot]
+
+
+
+## Marketing and Seo
+
+I listed short and long tail words:
+
+Short-tail words:
+
+
+
+
+Long-tail words:
+
+
+
+I used word tracker and Google search to narrow them down. I chose the ones with more relevance. I included this words in headers and meta tags
+
+
+
+[screenshot]
+
+
+### Social Media
+
+I created a facebook page:
+[screnshot]
+
+
+
+
 
 
 
@@ -107,6 +161,18 @@ During the development process, I was manually testing in the following ways:
 * Add a review
 
 
+## Bugs
+
+1. The checkout form did not have the option to scroll through countries. I fixed it importing countryfield in models.py 
+2. Favourtie button funcionality it was not working. The filter to determine if favorite exists was wrong and the product detail page was rendering template without favorite context variable.
+3. The review section was not displaying the edit and delete option. The edit/detele code was not part of the {review in product.reviews.all} loop. 
+
+
+
+## Code Validation 
+
+
+
 ## Post Development Testing
 
 ### Lighthouse score
@@ -117,10 +183,6 @@ Mobile:
 
 
 Desktop:
-
-
-
-
 
 The perfomance score in both is  low. I read Perfomance Django Documentation to know how to improve the performance. The sujestion were:
 
@@ -134,5 +196,10 @@ The perfomance score in both is  low. I read Perfomance Django Documentation to 
      Use caching: I did set caching in the setting file. This improve the perfomance but I have to remove it because it was compromising the log in.
      Reduce Queries: I  went through my code and I did noy find the way to reduce the amount of queries 
 
+
+
+## Deployment 
+
+### Elephant SQL
 
 
