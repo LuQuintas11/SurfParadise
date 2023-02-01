@@ -13,7 +13,6 @@ class OrderAdmin(admin.ModelAdmin):
     readonly_fields = (
         "order_number",
         "date",
-        "delivery_cost",
         "order_total",
         "grand_total",
         "original_bag",
@@ -32,7 +31,6 @@ class OrderAdmin(admin.ModelAdmin):
         "street_address1",
         "street_address2",
         "county",
-        "delivery_cost",
         "order_total",
         "grand_total",
         "original_bag",
@@ -44,7 +42,6 @@ class OrderAdmin(admin.ModelAdmin):
         "date",
         "full_name",
         "order_total",
-        "delivery_cost",
         "grand_total",
     )
 
